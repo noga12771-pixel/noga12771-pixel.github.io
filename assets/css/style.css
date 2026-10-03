@@ -1,0 +1,431 @@
+/* ==========================================================
+   תיק העבודות של נוגה נחמן
+   הדפסה בצבע אחד: דיו כחולה על נייר לבן
+   ========================================================== */
+
+/* ---------- גופן מולדת ----------
+   יופעל כשהקובץ assets/fonts/moledet.woff2 יגיע.
+   עד אז הכותרות משתמשות ב-Secular One מ-Google Fonts.
+
+@font-face {
+  font-family: "Moledet";
+  src: url("../fonts/moledet.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+/* ---------- משתנים ---------- */
+:root {
+  /* צבעים */
+  --ink: #233468;
+  --ink-soft: #5A6690;
+  --paper: #FFFFFF;
+  --paper-shade: #ECEEF3;
+
+  /* גופנים. מולדת כולל רק עברית, ספרות ופיסוק,
+     ולכן Secular One משמש גם כ-fallback לאותיות לועזיות */
+  --font-display: "Moledet", "Secular One", "Arial Hebrew", Arial, sans-serif;
+  --font-text: "Frank Ruhl Libre", "David", "Times New Roman", serif;
+
+  /* סקאלה טיפוגרפית */
+  --fs-hero: clamp(56px, 12vw, 168px);
+  --fs-project-title: clamp(40px, 7vw, 88px);
+  --fs-card-title: clamp(22px, 2.4vw, 30px);
+  --fs-subhead: 22px;
+  --fs-body: 18px;
+  --lh-body: 1.75;
+  --fs-small: 15px;
+
+  /* פריסה */
+  --max-width: 1280px;
+  --text-width: 680px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --grid-gap: clamp(20px, 3vw, 48px);
+  --space-section: clamp(48px, 8vw, 120px);
+  --dash: 1px dashed var(--ink);
+
+  /* תנועה */
+  --swap-duration: 350ms;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --fs-body: 17px;
+  }
+}
+
+/* ---------- בסיס ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--max-width) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.text {
+  max-width: var(--text-width);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* קישור דילוג לתוכן, מופיע רק בניווט מקלדת */
+.skip-link {
+  position: absolute;
+  inset-inline-start: var(--gutter);
+  top: -100px;
+  z-index: 10;
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: var(--fs-small);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ---------- placeholder: מקום שמור לתמונה שעוד לא הגיעה ---------- */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: var(--paper-shade);
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  border-bottom: var(--dash);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.brand__portrait {
+  flex: none;
+  width: 40px;
+  height: 40px;
+}
+
+.brand__portrait.placeholder {
+  padding: 0;
+  border: var(--dash);
+}
+
+.site-nav ul {
+  display: flex;
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.site-nav a {
+  font-family: var(--font-display);
+  font-size: 20px;
+  text-decoration: none;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .site-header__inner {
+    padding-block: 14px;
+  }
+
+  .brand {
+    font-size: 20px;
+    gap: 10px;
+  }
+
+  .brand__portrait {
+    width: 32px;
+    height: 32px;
+  }
+
+  .site-nav a {
+    font-size: 18px;
+  }
+}
+
+/* ---------- עמוד הבית: פתיחה ---------- */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: var(--grid-gap);
+  padding-block: var(--space-section);
+}
+
+.intro__name {
+  font-size: var(--fs-hero);
+  line-height: 0.95;
+}
+
+.intro__tagline {
+  margin-top: clamp(12px, 2vw, 24px);
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.5;
+}
+
+.intro__portrait {
+  width: clamp(140px, 24vw, 320px);
+  aspect-ratio: 1 / 1;
+}
+
+.intro__portrait.placeholder {
+  border: var(--dash);
+}
+
+@media (max-width: 767px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .intro__portrait {
+    order: -1;
+    width: 120px;
+  }
+}
+
+/* ---------- עמוד הבית: גריד הפרויקטים ---------- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--grid-gap);
+  row-gap: clamp(56px, 7vw, 112px);
+  padding-bottom: var(--space-section);
+}
+
+.work-grid__item--wide {
+  grid-column: span 7;
+}
+
+.work-grid__item--narrow {
+  grid-column: span 5;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+}
+
+.card__media {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper-shade);
+  aspect-ratio: 4 / 3;
+}
+
+.work-grid__item--narrow .card__media {
+  aspect-ratio: 4 / 5;
+}
+
+.card__media > * {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__media img {
+  object-fit: cover;
+}
+
+/* בריחוף מוצגת תמונה שנייה מהפרויקט */
+.card__media img + img {
+  opacity: 0;
+  transition: opacity var(--swap-duration) ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .card__media img + img {
+    opacity: 1;
+  }
+}
+
+.card__title {
+  margin-top: 16px;
+  font-size: var(--fs-card-title);
+}
+
+.card__subtitle {
+  margin-top: 6px;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+.card__domains {
+  margin-top: 4px;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-grid__item--wide,
+  .work-grid__item--narrow {
+    grid-column: auto;
+  }
+
+  .work-grid__item--narrow .card__media {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding-block: clamp(24px, 4vw, 48px);
+}
+
+.site-footer__frame {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px 40px;
+  padding: clamp(20px, 3vw, 32px);
+  border: 1px dashed var(--paper);
+}
+
+.site-footer__name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+}
+
+.site-footer a {
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.site-footer a:hover {
+  text-decoration: none;
+}
+
+.site-footer :focus-visible {
+  outline-color: var(--paper);
+}
+
+.site-footer__copyright {
+  font-size: var(--fs-small);
+}
+
+/* ---------- תנועה מופחתת ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .card__media img + img,
+  .card:hover .card__media img + img {
+    opacity: 0;
+    transition: none;
+  }
+}
