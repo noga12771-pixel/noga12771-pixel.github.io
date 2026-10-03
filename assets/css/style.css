@@ -865,18 +865,13 @@ ul {
 
 /* ---------- swap: תמונה שמתחלפת לתמונה אחרת ----------
    בריחוף (דסקטופ) או בהקשה (מגע ומקלדת) התמונה הראשונה מתחלפת בשנייה, באותה מסגרת.
-   התמונה השנייה על רקע לבן, כי הלוגו בכחול כהה ולא היה נראה על הרקע הכהה. */
-.block--swap .block__label {
-  max-width: var(--text-width);
-  margin-inline: auto;
-  text-align: center;
-}
-
+   התמונה השנייה על רקע לבן, כי הלוגו בכחול כהה ולא היה נראה על הרקע הכהה.
+   הבלוק מיושר לימין, יחד עם הכיתובים מעליו ומתחתיו. */
 .swap {
   position: relative;
   display: block;
-  width: min(100%, 459px);
-  margin-inline: auto;
+  width: min(100%, 650px);
+  margin-inline: 0 auto;
   padding: 0;
   border: 0;
   background: none;
@@ -890,17 +885,18 @@ ul {
 .swap__b {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  padding: 12%;
+  display: block;
+  padding: 6%;
   background: #FFFFFF;
   opacity: 0;
   transition: opacity var(--swap-duration) ease;
 }
 
+/* התמונה השנייה נכנסת כולה למסגרת, בלי חיתוך, גם אם היחס שלה שונה */
 .swap__b img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media (hover: hover) and (pointer: fine) {

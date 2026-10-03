@@ -492,9 +492,9 @@
       "type": "image",
       "sizes": [
         {
-          "file": "assets/img/haifa-kids-festival/logotype-1987-459.webp",
-          "width": 459,
-          "height": 650,
+          "file": "assets/img/haifa-kids-festival/logotype-1987-650.webp",
+          "width": 650,
+          "height": 459,
           "kb": 60
         }
       ]

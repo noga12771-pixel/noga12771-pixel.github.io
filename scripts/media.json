@@ -127,7 +127,8 @@
     },
     {
       "src": "לוגוטייפ הראשון.jpg",
-      "name": "logotype-1987"
+      "name": "logotype-1987",
+      "rotate": 90
     },
     {
       "src": "logo.svg",

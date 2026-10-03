@@ -13,6 +13,7 @@
           סרט עם קול ונגן (סוג "film" ב-media.json, למשל סרט תדמית) מותר עד 25MB.
           ליצירת ה-poster צריך את הספרייה PyAV:  python -m pip install --user av
 SVG: מועתק כמו שהוא (בלי המרה), בשם באנגלית.
+אפשר להוסיף לתמונה ב-media.json את "rotate" (90, 180 או 270, עם כיוון השעון) כדי לסובב אותה.
 
 הרצה (מתיקיית הפרויקט):
     python scripts/process_media.py              כל הפרויקטים
@@ -66,8 +67,10 @@ def save_image_sizes(im, out_dir, name, force):
     return results
 
 
-def process_image(src, slug, name, force):
+def process_image(src, slug, name, force, rotate=0):
     im = ImageOps.exif_transpose(Image.open(src))
+    if rotate:
+        im = im.rotate(-rotate, expand=True)  # rotate במעלות, עם כיוון השעון
     return {"type": "image", "sizes": save_image_sizes(im, IMG_OUT / slug, name, force)}
 
 
@@ -137,7 +140,7 @@ def main():
                     output[slug].pop(name, None)
             else:
                 print(f"  תמונה: {name}")
-                output[slug][name] = process_image(src, slug, name, force)
+                output[slug][name] = process_image(src, slug, name, force, item.get("rotate", 0))
 
     OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\nנשמר: {OUTPUT.relative_to(ROOT)}")
