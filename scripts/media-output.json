@@ -181,6 +181,57 @@
           "kb": 32
         }
       ]
+    },
+    "show-photo-1": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/by-the-cover/show-photo-1-2400.webp",
+          "width": 2400,
+          "height": 3200,
+          "kb": 865
+        },
+        {
+          "file": "assets/img/by-the-cover/show-photo-1-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 180
+        }
+      ]
+    },
+    "show-photo-2": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/by-the-cover/show-photo-2-2400.webp",
+          "width": 2400,
+          "height": 3200,
+          "kb": 731
+        },
+        {
+          "file": "assets/img/by-the-cover/show-photo-2-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 162
+        }
+      ]
+    },
+    "show-photo-3": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/by-the-cover/show-photo-3-2400.webp",
+          "width": 2400,
+          "height": 3200,
+          "kb": 698
+        },
+        {
+          "file": "assets/img/by-the-cover/show-photo-3-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 184
+        }
+      ]
     }
   },
   "haifa-kids-festival": {

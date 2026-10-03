@@ -20,6 +20,28 @@
   }, { threshold: 0.25 });
 
   videos.forEach((video) => observer.observe(video));
+
+  // עם prefers-reduced-motion: בעמוד פרויקט מוצג כפתור ניגון, כדי שאפשר יהיה להפעיל ידנית.
+  // בגריד אין כפתור, כי כל הכרטיס הוא קישור.
+  if (reduceMotion.matches) {
+    videos.forEach((video) => {
+      if (video.closest(".card")) return;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "video-toggle";
+      button.textContent = "הפעלת הסרטון";
+      button.addEventListener("click", () => {
+        if (video.paused) {
+          video.play().catch(() => {});
+          button.textContent = "השהיית הסרטון";
+        } else {
+          video.pause();
+          button.textContent = "הפעלת הסרטון";
+        }
+      });
+      video.after(button);
+    });
+  }
 })();
 
 // ---------- אפקט הקלדה בשם ----------
