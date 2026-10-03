@@ -1,5 +1,35 @@
 // תיק העבודות של נוגה נחמן
-// בהמשך ייכנס כאן גם שדה ההתנסות בגופן מולדת.
+
+// ---------- שדה התנסות בגופן מולדת (7.2) ----------
+// סליידר גודל (32–200px, במובייל 24–96px) ומתג צבעים (בהיר על כהה / כהה על בהיר).
+(function fontTester() {
+  const tester = document.querySelector("[data-font-tester]");
+  if (!tester) return;
+  const range = tester.querySelector("[data-ft-size]");
+  const out = tester.querySelector("[data-ft-size-out]");
+  const mobile = window.matchMedia("(max-width: 767px)");
+
+  function apply() {
+    tester.style.setProperty("--ft-size", `${range.value}px`);
+    out.textContent = `${range.value}px`;
+  }
+
+  function setRange() {
+    const [min, max] = mobile.matches ? [24, 96] : [32, 200];
+    range.min = min;
+    range.max = max;
+    range.value = Math.min(max, Math.max(min, Number(range.value)));
+    apply();
+  }
+
+  range.addEventListener("input", apply);
+  mobile.addEventListener("change", setRange);
+  setRange();
+
+  tester.querySelectorAll('input[name="ft-theme"]').forEach((radio) => {
+    radio.addEventListener("change", () => { tester.dataset.theme = radio.value; });
+  });
+})();
 
 // ---------- "בחזרה למעלה" ----------
 // קישורים ל-#top (הסמל ב-header בעמוד הבית, "בחזרה למעלה" בתחתית עמוד פרויקט)

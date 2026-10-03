@@ -419,6 +419,74 @@
           "kb": 127
         }
       ]
+    },
+    "posters-trio": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/posters-trio-1600.webp",
+          "width": 1600,
+          "height": 1061,
+          "kb": 219
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/posters-trio-1200.webp",
+          "width": 1200,
+          "height": 796,
+          "kb": 135
+        }
+      ]
+    },
+    "program": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/program-2400.webp",
+          "width": 2400,
+          "height": 1221,
+          "kb": 163
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/program-1200.webp",
+          "width": 1200,
+          "height": 611,
+          "kb": 50
+        }
+      ]
+    },
+    "billboard": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/billboard-2400.webp",
+          "width": 2400,
+          "height": 1800,
+          "kb": 1022
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/billboard-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "kb": 282
+        }
+      ]
+    },
+    "website-phone": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/website-phone-2400.webp",
+          "width": 2400,
+          "height": 1600,
+          "kb": 68
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/website-phone-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "kb": 24
+        }
+      ]
     }
   },
   "du-hayim": {
@@ -477,6 +545,159 @@
           "kb": 42
         }
       ]
+    },
+    "spread-characters": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/spread-characters-2400.webp",
+          "width": 2400,
+          "height": 1806,
+          "kb": 576
+        },
+        {
+          "file": "assets/img/du-hayim/spread-characters-1200.webp",
+          "width": 1200,
+          "height": 903,
+          "kb": 167
+        }
+      ]
+    },
+    "spread-turtle": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/spread-turtle-2400.webp",
+          "width": 2400,
+          "height": 1842,
+          "kb": 489
+        },
+        {
+          "file": "assets/img/du-hayim/spread-turtle-1200.webp",
+          "width": 1200,
+          "height": 921,
+          "kb": 121
+        }
+      ]
+    },
+    "spread-firefly": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/spread-firefly-2400.webp",
+          "width": 2400,
+          "height": 1838,
+          "kb": 598
+        },
+        {
+          "file": "assets/img/du-hayim/spread-firefly-1200.webp",
+          "width": 1200,
+          "height": 919,
+          "kb": 90
+        }
+      ]
+    },
+    "spread-frogs": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/spread-frogs-2400.webp",
+          "width": 2400,
+          "height": 1847,
+          "kb": 488
+        },
+        {
+          "file": "assets/img/du-hayim/spread-frogs-1200.webp",
+          "width": 1200,
+          "height": 923,
+          "kb": 85
+        }
+      ]
+    },
+    "book-photo-1": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/book-photo-1-2400.webp",
+          "width": 2400,
+          "height": 1733,
+          "kb": 73
+        },
+        {
+          "file": "assets/img/du-hayim/book-photo-1-1200.webp",
+          "width": 1200,
+          "height": 866,
+          "kb": 28
+        }
+      ]
+    },
+    "book-photo-2": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/book-photo-2-2400.webp",
+          "width": 2400,
+          "height": 1802,
+          "kb": 79
+        },
+        {
+          "file": "assets/img/du-hayim/book-photo-2-1200.webp",
+          "width": 1200,
+          "height": 901,
+          "kb": 24
+        }
+      ]
+    },
+    "book-photo-3": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/book-photo-3-2400.webp",
+          "width": 2400,
+          "height": 1802,
+          "kb": 167
+        },
+        {
+          "file": "assets/img/du-hayim/book-photo-3-1200.webp",
+          "width": 1200,
+          "height": 901,
+          "kb": 66
+        }
+      ]
+    },
+    "detail-cat": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/detail-cat-2400.webp",
+          "width": 2400,
+          "height": 1802,
+          "kb": 95
+        },
+        {
+          "file": "assets/img/du-hayim/detail-cat-1200.webp",
+          "width": 1200,
+          "height": 901,
+          "kb": 31
+        }
+      ]
+    },
+    "detail-mouse": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/detail-mouse-2400.webp",
+          "width": 2400,
+          "height": 1802,
+          "kb": 84
+        },
+        {
+          "file": "assets/img/du-hayim/detail-mouse-1200.webp",
+          "width": 1200,
+          "height": 901,
+          "kb": 34
+        }
+      ]
     }
   },
   "aya-korem-vinyl": {
@@ -533,6 +754,74 @@
           "width": 1200,
           "height": 675,
           "kb": 27
+        }
+      ]
+    },
+    "cover-front": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/cover-front-2400.webp",
+          "width": 2400,
+          "height": 3200,
+          "kb": 524
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/cover-front-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 173
+        }
+      ]
+    },
+    "cover-back": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/cover-back-2400.webp",
+          "width": 2400,
+          "height": 3200,
+          "kb": 528
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/cover-back-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 185
+        }
+      ]
+    },
+    "cover-layout": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/cover-layout-2400.webp",
+          "width": 2400,
+          "height": 1388,
+          "kb": 694
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/cover-layout-1200.webp",
+          "width": 1200,
+          "height": 694,
+          "kb": 144
+        }
+      ]
+    },
+    "booklet-mockup": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/booklet-mockup-2400.webp",
+          "width": 2400,
+          "height": 1800,
+          "kb": 86
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/booklet-mockup-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "kb": 29
         }
       ]
     }
@@ -601,6 +890,57 @@
           "width": 864,
           "height": 1080,
           "kb": 16
+        }
+      ]
+    },
+    "bags-wall": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/checkcheck/bags-wall-2400.webp",
+          "width": 2400,
+          "height": 3524,
+          "kb": 135
+        },
+        {
+          "file": "assets/img/checkcheck/bags-wall-1200.webp",
+          "width": 1200,
+          "height": 1762,
+          "kb": 41
+        }
+      ]
+    },
+    "exhibition-1": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/checkcheck/exhibition-1-2400.webp",
+          "width": 2400,
+          "height": 3195,
+          "kb": 176
+        },
+        {
+          "file": "assets/img/checkcheck/exhibition-1-1200.webp",
+          "width": 1200,
+          "height": 1598,
+          "kb": 67
+        }
+      ]
+    },
+    "exhibition-2": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/checkcheck/exhibition-2-1500.webp",
+          "width": 1500,
+          "height": 1826,
+          "kb": 128
+        },
+        {
+          "file": "assets/img/checkcheck/exhibition-2-1200.webp",
+          "width": 1200,
+          "height": 1461,
+          "kb": 87
         }
       ]
     }

@@ -108,6 +108,22 @@
       "src": "haifa-kids-festival-8motion-web.mp4",
       "name": "exhibition-website-b",
       "poster_at": 1.0
+    },
+    {
+      "src": "כרזות 2.jpg",
+      "name": "posters-trio"
+    },
+    {
+      "src": "O7DD6A1 copy2.jpg",
+      "name": "program"
+    },
+    {
+      "src": "Billboard_Mockup_1 copy.jpg",
+      "name": "billboard"
+    },
+    {
+      "src": "Free iPhone 16 Pro Mockup copy.jpg",
+      "name": "website-phone"
     }
   ],
   "du-hayim": [
@@ -123,6 +139,42 @@
       "src": "bookmotion-web.mp4",
       "name": "page-flip",
       "poster_at": 2.8
+    },
+    {
+      "src": "סריקה/Scan_20260704_222611.jpg",
+      "name": "spread-characters"
+    },
+    {
+      "src": "סריקה/Scan_20260704_223104.jpg",
+      "name": "spread-turtle"
+    },
+    {
+      "src": "סריקה/Scan_20260704_224829.jpg",
+      "name": "spread-firefly"
+    },
+    {
+      "src": "סריקה/Scan_20260704_230649.jpg",
+      "name": "spread-frogs"
+    },
+    {
+      "src": "תמונות/נבחר (13) copy.jpg",
+      "name": "book-photo-1"
+    },
+    {
+      "src": "תמונות/נבחר (34) copy.jpg",
+      "name": "book-photo-2"
+    },
+    {
+      "src": "תמונות/נבחר (47) copy.jpg",
+      "name": "book-photo-3"
+    },
+    {
+      "src": "תמונות/נבחר (3) copy.jpg",
+      "name": "detail-cat"
+    },
+    {
+      "src": "תמונות/נבחר (27) copy.jpg",
+      "name": "detail-mouse"
     }
   ],
   "aya-korem-vinyl": [
@@ -138,6 +190,22 @@
       "src": "vinylmotion-web.mp4",
       "name": "vinyl-motion",
       "poster_at": 1.0
+    },
+    {
+      "src": "20260129_122021 copy.png",
+      "name": "cover-front"
+    },
+    {
+      "src": "20260129_122047 copy.png",
+      "name": "cover-back"
+    },
+    {
+      "src": "פריסה של עטיפת תקליט.jpg",
+      "name": "cover-layout"
+    },
+    {
+      "src": "מוקאפ חוברת שירים copy.jpg",
+      "name": "booklet-mockup"
     }
   ],
   "checkcheck": [
@@ -164,6 +232,18 @@
       "name": "promo-film",
       "poster_at": 1.0,
       "type": "film"
+    },
+    {
+      "src": "תמנוות מההגשה/20260204_113935 copy.jpg",
+      "name": "bags-wall"
+    },
+    {
+      "src": "תמנוות מההגשה/20260204_085021 copy.jpg",
+      "name": "exhibition-1"
+    },
+    {
+      "src": "תמנוות מההגשה/IMG-20260204-WA0099 copy.jpg",
+      "name": "exhibition-2"
     }
   ],
   "moledet-font": [

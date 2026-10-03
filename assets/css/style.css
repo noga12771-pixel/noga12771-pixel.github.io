@@ -728,12 +728,16 @@ ul {
   line-height: var(--lh-small);
 }
 
-/* תמונה בודדת לא גבוהה ממסך אחד, ולא נחתכת */
-.block--full img {
-  width: auto;
-  max-width: 100%;
+/* תמונה או סרטון בודדים לא גבוהים ממסך אחד, ולא נחתכים.
+   התיבה מקבלת את מלוא הרוחב כבר לפני הטעינה (לפי width/height ב-HTML), כך שהעמוד לא קופץ,
+   והמדיה ממורכזת בתוכה בלי חיתוך (object-fit: contain) */
+.block--full img,
+.block--full video,
+.block--video video {
+  width: 100%;
+  height: auto;
   max-height: var(--screen-max);
-  margin-inline: auto;
+  object-fit: contain;
 }
 
 /* pair עם תמונות ביחסים שונים: אותו גובה לשתיהן (הרוחב לפי היחס של כל אחת),
@@ -746,7 +750,7 @@ ul {
   width: 100%;
 }
 
-.block--fit img {
+.block--fit > * {
   flex: var(--ratio) 1 0;
   min-width: 0;
 }
@@ -841,6 +845,126 @@ ul {
   color: var(--text-hover);
 }
 
+/* ---------- film: סרט עם קול, כנגן רגיל ---------- */
+.block--film video {
+  width: 100%;
+  height: auto;
+  background: var(--surface);
+}
+
+/* ---------- שדה התנסות בגופן מולדת (7.2) ---------- */
+.font-tester {
+  border: var(--dash);
+  padding: clamp(20px, 3vw, 40px);
+}
+
+.font-tester__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-bottom: clamp(20px, 3vw, 32px);
+  font-size: var(--fs-small);
+}
+
+.font-tester__size {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.font-tester__size input {
+  width: clamp(140px, 22vw, 260px);
+  accent-color: var(--accent);
+}
+
+.font-tester__size output {
+  min-width: 4.5ch;
+  color: var(--text-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* מתג צבעים: שני כפתורי רדיו שנראים כמו מתג */
+.font-tester__theme {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: var(--stroke) solid var(--line);
+}
+
+.font-tester__theme label {
+  position: relative;
+}
+
+.font-tester__theme input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+}
+
+.font-tester__theme span {
+  display: block;
+  padding: 6px 14px;
+}
+
+.font-tester__theme label + label span {
+  border-inline-start: var(--stroke) solid var(--line);
+}
+
+.font-tester__theme input:checked + span {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.font-tester__theme input:focus-visible + span {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.font-tester__text {
+  display: block;
+  width: 100%;
+  min-height: 1.4em;
+  padding: 0.15em 0.2em;
+  border: 0;
+  resize: vertical;
+  background: var(--bg);
+  color: var(--text);
+  font-size: var(--ft-size, 96px);
+  line-height: 1.2;
+  field-sizing: content;
+}
+
+.font-tester__text:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.font-tester[data-theme="dark"] .font-tester__text {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.font-tester__note {
+  margin-top: 16px;
+  color: var(--text-soft);
+  font-size: var(--fs-small);
+}
+
+@media (max-width: 767px) {
+  /* במובייל הסליידר והמתג נערמים זה מעל זה */
+  .font-tester__controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .font-tester__size input {
+    flex: 1;
+  }
+}
+
 /* ---------- לפרויקט הבא ---------- */
 .next-project {
   display: flex;
@@ -892,12 +1016,12 @@ ul {
     max-width: none;
   }
 
-  .block--fit img {
+  .block--fit > * {
     flex: none;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     max-height: var(--screen-max);
-    margin-inline: auto;
+    object-fit: contain;
   }
 
   .project__body {
