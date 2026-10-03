@@ -20,12 +20,13 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
-<body class="home">
+<body id="top" class="home">
   <a class="skip-link" href="#main">דלג לתוכן</a>
 
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="home-link" href="./" aria-label="נוגה נחמן: לעמוד הבית">
+      <!-- בעמוד הבית הדיוקן גולל לראש העמוד; בשאר העמודים הוא מוביל לעמוד הבית -->
+      <a class="home-link" href="#top" aria-label="נוגה נחמן: לראש העמוד">
         <img class="portrait"
              src="assets/illustrations/portrait-240.webp"
              srcset="assets/illustrations/portrait-240.webp 240w, assets/illustrations/portrait-900.webp 900w"
@@ -45,10 +46,12 @@
 
   <main id="main">
     <section class="container intro" aria-label="פתיחה">
-      <h1 class="intro__name">נוגה נחמן</h1>
+      <h1 class="intro__name display-font">נוגה נחמן</h1>
       <p class="intro__tagline">עיצוב, מיתוג, איור ודפוס.</p>
       <a class="scroll-cue" href="#works">
-        <span class="scroll-cue__square" aria-hidden="true"></span>
+        <svg class="scroll-cue__arrow" viewBox="0 0 14 28" aria-hidden="true" focusable="false">
+          <path d="M7 1v25M1 20l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="square"/>
+        </svg>
         לגלילה
       </a>
     </section>
