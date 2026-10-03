@@ -54,6 +54,10 @@
       "name": "illustration-wall"
     },
     {
+      "src": "IMG-20250706-WA0169(1).jpg",
+      "name": "grid-photo"
+    },
+    {
       "src": "haifa-kids-festival-1motion-web.mp4",
       "name": "mockups",
       "poster_at": 2.0
@@ -146,7 +150,8 @@
     {
       "src": "chikcheck3-motion-web.mp4",
       "name": "promo-film",
-      "poster_at": 1.0
+      "poster_at": 1.0,
+      "type": "film"
     }
   ],
   "moledet-font": [
@@ -161,7 +166,7 @@
     {
       "src": "moledet-motion-web.mp4",
       "name": "motion",
-      "poster_at": 2.5
+      "poster_at": 40.0
     }
   ]
 }

@@ -15,3 +15,6 @@ desktop.ini
 
 # הגדרות מקומיות של Claude Code
 .claude/
+
+# דפי סקירה מקומיים (דפי מגע, חיתוכים לאישור). לא עולים ל-GitHub
+review/

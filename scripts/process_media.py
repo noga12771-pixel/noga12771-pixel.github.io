@@ -6,10 +6,11 @@
 
 תמונות: WebP באיכות 82, בשני רוחבים (2400 ו-1200, בלי הגדלה מעבר למקור).
          השם כולל את הרוחב בפועל, למשל poster-wall-2400.webp.
-סרטונים: נוגה דוחסת אותם בעצמה ב-Adobe Media Encoder (H.264, בלי קול, עד 5MB),
+סרטונים: נוגה דוחסת אותם בעצמה ב-Adobe Media Encoder (H.264, בלי קול, עד 5.5MB),
           עם המילה "web" בשם. הסקריפט רק מעתיק אותם ל-assets/video/<slug>/ בשם באנגלית,
           ומייצר תמונת poster ב-WebP מפריים מתוך הסרטון (לפי poster_at, בשניות).
-          קובץ גדול מ-5MB לא מועתק, והסקריפט מדווח עליו.
+          קובץ גדול מ-5.5MB לא מועתק, והסקריפט מדווח עליו.
+          סרט עם קול ונגן (סוג "film" ב-media.json, למשל סרט תדמית) מותר עד 25MB.
           ליצירת ה-poster צריך את הספרייה PyAV:  python -m pip install --user av
 
 הרצה (מתיקיית הפרויקט):
@@ -36,7 +37,8 @@ OUTPUT = ROOT / "scripts" / "media-output.json"
 
 IMAGE_WIDTHS = (2400, 1200)
 WEBP_QUALITY = 82
-VIDEO_MAX_BYTES = 5 * 1024 * 1024
+VIDEO_MAX_BYTES = int(5.5 * 1024 * 1024)
+FILM_MAX_BYTES = 25 * 1024 * 1024  # סרט עם קול ונגן (type: film)
 VIDEO_EXTS = {".mp4", ".mov", ".m4v", ".webm"}
 
 Image.MAX_IMAGE_PIXELS = None  # סריקות גדולות מאוד
@@ -68,11 +70,12 @@ def process_image(src, slug, name, force):
     return {"type": "image", "sizes": save_image_sizes(im, IMG_OUT / slug, name, force)}
 
 
-def process_video(src, slug, name, force, poster_at):
+def process_video(src, slug, name, force, poster_at, kind="video"):
     """מעתיק סרטון מוכן (web) ומייצר לו poster. מחזיר None אם הקובץ גדול מדי."""
     size = src.stat().st_size
-    if size > VIDEO_MAX_BYTES:
-        print(f"    גדול מ-5MB ({size / 1024 / 1024:.2f}MB), לא הועתק. צריך לדחוס מחדש.")
+    limit = FILM_MAX_BYTES if kind == "film" else VIDEO_MAX_BYTES
+    if size > limit:
+        print(f"    גדול מ-{limit / 1024 / 1024:g}MB ({size / 1024 / 1024:.2f}MB), לא הועתק. צריך לדחוס מחדש.")
         return None
     out_dir = VIDEO_OUT / slug
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -94,7 +97,7 @@ def process_video(src, slug, name, force, poster_at):
         width, height = stream.codec_context.width, stream.codec_context.height
     poster_sizes = save_image_sizes(poster, IMG_OUT / slug, f"{name}-poster", force)
 
-    return {"type": "video", "file": dst.relative_to(ROOT).as_posix(),
+    return {"type": kind, "file": dst.relative_to(ROOT).as_posix(),
             "mb": round(size / 1024 / 1024, 2), "duration": round(duration, 1),
             "width": width, "height": height, "poster": poster_sizes}
 
@@ -118,7 +121,8 @@ def main():
                 continue
             if src.suffix.lower() in VIDEO_EXTS:
                 print(f"  סרטון: {name}")
-                result = process_video(src, slug, name, force, item.get("poster_at", 1.0))
+                result = process_video(src, slug, name, force, item.get("poster_at", 1.0),
+                                       item.get("type", "video"))
                 if result:
                     output[slug][name] = result
                 else:

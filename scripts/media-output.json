@@ -159,6 +159,28 @@
           "kb": 24
         }
       ]
+    },
+    "opening-screen": {
+      "type": "video",
+      "file": "assets/video/by-the-cover/opening-screen.mp4",
+      "mb": 5.05,
+      "duration": 10.3,
+      "width": 1280,
+      "height": 640,
+      "poster": [
+        {
+          "file": "assets/img/by-the-cover/opening-screen-poster-1280.webp",
+          "width": 1280,
+          "height": 640,
+          "kb": 35
+        },
+        {
+          "file": "assets/img/by-the-cover/opening-screen-poster-1200.webp",
+          "width": 1200,
+          "height": 600,
+          "kb": 32
+        }
+      ]
     }
   },
   "haifa-kids-festival": {
@@ -313,6 +335,45 @@
           "kb": 30
         }
       ]
+    },
+    "grid-photo": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/grid-photo-1600.webp",
+          "width": 1600,
+          "height": 935,
+          "kb": 197
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/grid-photo-1200.webp",
+          "width": 1200,
+          "height": 701,
+          "kb": 134
+        }
+      ]
+    },
+    "animated-wall": {
+      "type": "video",
+      "file": "assets/video/haifa-kids-festival/animated-wall.mp4",
+      "mb": 5.08,
+      "duration": 30.4,
+      "width": 1280,
+      "height": 592,
+      "poster": [
+        {
+          "file": "assets/img/haifa-kids-festival/animated-wall-poster-1280.webp",
+          "width": 1280,
+          "height": 592,
+          "kb": 122
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/animated-wall-poster-1200.webp",
+          "width": 1200,
+          "height": 555,
+          "kb": 127
+        }
+      ]
     }
   },
   "du-hayim": {
@@ -405,6 +466,28 @@
           "width": 1200,
           "height": 900,
           "kb": 43
+        }
+      ]
+    },
+    "vinyl-motion": {
+      "type": "video",
+      "file": "assets/video/aya-korem-vinyl/vinyl-motion.mp4",
+      "mb": 5.06,
+      "duration": 16.2,
+      "width": 1280,
+      "height": 720,
+      "poster": [
+        {
+          "file": "assets/img/aya-korem-vinyl/vinyl-motion-poster-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "kb": 29
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/vinyl-motion-poster-1200.webp",
+          "width": 1200,
+          "height": 675,
+          "kb": 27
         }
       ]
     }
@@ -524,13 +607,13 @@
           "file": "assets/img/moledet-font/motion-poster-1280.webp",
           "width": 1280,
           "height": 720,
-          "kb": 8
+          "kb": 3
         },
         {
           "file": "assets/img/moledet-font/motion-poster-1200.webp",
           "width": 1200,
           "height": 675,
-          "kb": 7
+          "kb": 3
         }
       ]
     }

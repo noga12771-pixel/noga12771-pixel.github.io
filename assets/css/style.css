@@ -432,7 +432,7 @@ ul {
 .card__media {
   position: relative;
   overflow: hidden;
-  background: var(--media-bg, var(--surface));
+  background: var(--surface);
   aspect-ratio: 4 / 3;
 }
 
@@ -443,16 +443,12 @@ ul {
   height: 100%;
 }
 
+/* תמונה או סרטון שאינם ביחס 4:3 נחתכים מהמרכז */
 .card__media img,
 .card__media video {
   object-fit: cover;
+  object-position: center;
   transition: transform var(--zoom-duration) ease;
-}
-
-/* סרטון ביחס אחר מ-4:3 עם רקע אחיד: מוצג בשלמותו, והמסגרת נצבעת ברקע שלו
-   (--media-bg על card__media), כך שלא רואים פסים ושום דבר לא נחתך */
-.card__media .is-contained {
-  object-fit: contain;
 }
 
 /* בריחוף התמונה (או הסרטון) מתקרבת ב-10% בתוך המסגרת. המסגרת לא משתנה (overflow: hidden) */
