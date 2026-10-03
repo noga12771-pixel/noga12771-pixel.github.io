@@ -730,6 +730,23 @@
           "kb": 34
         }
       ]
+    },
+    "hero-photo": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/hero-photo-2400.webp",
+          "width": 2400,
+          "height": 1802,
+          "kb": 70
+        },
+        {
+          "file": "assets/img/du-hayim/hero-photo-1200.webp",
+          "width": 1200,
+          "height": 901,
+          "kb": 29
+        }
+      ]
     }
   },
   "aya-korem-vinyl": {
