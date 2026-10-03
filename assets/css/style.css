@@ -746,14 +746,19 @@ ul {
   line-height: var(--lh-small);
 }
 
-/* תמונה או סרטון בודדים לא גבוהים ממסך אחד, ולא נחתכים.
-   התיבה מקבלת את מלוא הרוחב כבר לפני הטעינה (לפי width/height ב-HTML), כך שהעמוד לא קופץ,
-   והמדיה ממורכזת בתוכה בלי חיתוך (object-fit: contain) */
+/* תמונה או סרטון בודדים לרוחב: תמיד ברוחב התוכן המלא, כך שכולם באותו רוחב (בלי חיתוך) */
 .block--full img,
 .block--full video,
 .block--video video {
   width: 100%;
   height: auto;
+}
+
+/* תמונה או סרטון לאורך (block--tall): לא גבוהים ממסך אחד, ולכן צרים יותר וממורכזים.
+   התיבה מקבלת את מלוא הרוחב כבר לפני הטעינה (לפי width/height ב-HTML), כך שהעמוד לא קופץ,
+   והמדיה ממורכזת בתוכה בלי חיתוך (object-fit: contain) */
+.block--tall img,
+.block--tall video {
   max-height: var(--screen-max);
   object-fit: contain;
 }
