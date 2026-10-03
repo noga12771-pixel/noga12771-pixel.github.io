@@ -391,9 +391,10 @@ portfolio/
 4. `full`: קיר האיור בתערוכה (אותה תמונה כמו בגריד בעמוד הבית)
 5. `pair`: שילוט חוצות ואתר האינטרנט
 6. `full`: קו המוצרים
-7. `pair`: הדמיית קיר הכרזות (שלישיית הכרזות, כחול, כתום, ירוק) וסרטון מההגשה
+7. `full`: הדמיית קיר הכרזות (שלישיית הכרזות, כחול, כתום, ירוק)
+8. `trio`: שלושה סרטונים מההגשה
 
-**שיבוץ קבצים בעמוד (הצעה, ממתין לאישור של נוגה):** 1: `haifa-kids-festival-2motion-web` (הכרזה המונפשת). 2: `IMG-20250706-WA0088`. 3: `לוגוטייפ הראשון` ו-`logo.svg` (בלוק `swap`). 4: `IMG-20250706-WA0169` (קיר האיור, כמו בגריד). 5: `Billboard_Mockup_1` ו-`Free iPhone 16 Pro Mockup`. 6: `haifa-kids-festival-1motion-web` (קו המוצרים, כסרטון). 7: `Posters_Under_The_Bridge copy` ו-`haifa-kids-festival-3motion-web`. (הבלוקים של התקריבים של איורים, של מפה, הזמנה ומודעת עיתון, ושל התוכנייה הוסרו לבקשת נוגה.)
+**שיבוץ קבצים בעמוד (הצעה, ממתין לאישור של נוגה):** 1: `haifa-kids-festival-2motion-web` (הכרזה המונפשת). 2: `IMG-20250706-WA0088`. 3: `לוגוטייפ הראשון` ו-`logo.svg` (בלוק `swap`). 4: `IMG-20250706-WA0169` (קיר האיור, כמו בגריד). 5: `Billboard_Mockup_1` ו-`Free iPhone 16 Pro Mockup`. 6: `haifa-kids-festival-1motion-web` (קו המוצרים, כסרטון). 7: `Posters_Under_The_Bridge copy`. 8: מימין לשמאל `haifa-kids-festival-6motion-web`, `haifa-kids-festival-5motion-web` ו-`haifa-kids-festival-3motion-web`. (הבלוקים של התקריבים של איורים, של מפה, הזמנה ומודעת עיתון, ושל התוכנייה הוסרו לבקשת נוגה.)
 
 ### 6.4 דו-חיים: מדריך למשחק שלא קיים
 
