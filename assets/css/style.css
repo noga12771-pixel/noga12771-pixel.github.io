@@ -57,6 +57,7 @@
   --space-section: clamp(48px, 8vw, 120px);
   --dash: 1px dashed var(--line);
   --nav-radius: 6px; /* פינות מעוגלות מעט, רק בסרגל הניווט */
+  --stroke: 2px; /* עובי הקו בסרגל הניווט ובחץ של "לגלילה" (אותו עובי) */
 
   /* תנועה */
   --zoom-duration: 450ms;
@@ -281,13 +282,13 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: max-content; /* כך כל משבצת מקבלת את הרוחב של המשבצת הרחבה ביותר */
-  border: 1px solid var(--line);
+  border: var(--stroke) solid var(--line);
   border-radius: var(--nav-radius);
   overflow: hidden;
 }
 
 .site-nav li + li {
-  border-inline-start: 1px solid var(--line);
+  border-inline-start: var(--stroke) solid var(--line);
 }
 
 .site-nav a {
@@ -458,11 +459,18 @@ ul {
   width: 14px;
   height: 28px;
   color: var(--accent);
+  overflow: visible;
   transition: transform var(--hover-duration) ease;
 }
 
 .scroll-cue:hover {
   color: var(--text-hover);
+}
+
+/* עובי הקו בפיקסלים אמיתיים, זהה לקו של סרגל הניווט */
+.scroll-cue__arrow path {
+  stroke-width: var(--stroke);
+  vector-effect: non-scaling-stroke;
 }
 
 /* בריחוף החץ גדל ב-10% */
