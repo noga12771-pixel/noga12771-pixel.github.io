@@ -56,6 +56,7 @@
   --gutter: clamp(20px, 5vw, 64px);
   --space-section: clamp(48px, 8vw, 120px);
   --dash: var(--stroke) dashed var(--line);
+  --screen-max: calc(100svh - var(--header-h) - 64px); /* גובה מקסימלי לתמונה: מסך אחד */
   --nav-radius: 6px; /* פינות מעוגלות מעט, רק בסרגל הניווט */
   --stroke: 2px; /* עובי כל הקווים: סרגל הניווט, החץ של "לגלילה" והקו המקווקו */
 
@@ -143,7 +144,8 @@ h3,
 p,
 ul,
 dl,
-dd {
+dd,
+figure {
   margin: 0;
 }
 
@@ -549,8 +551,10 @@ ul {
   padding-top: clamp(24px, 4vw, 48px);
 }
 
-.project__hero img {
+.project__hero img,
+.project__hero video {
   width: 100%;
+  height: auto;
 }
 
 .project__head {
@@ -704,6 +708,123 @@ ul {
   aspect-ratio: 16 / 7;
 }
 
+/* כיתוב קצר מעל בלוק */
+.block__label {
+  margin-bottom: clamp(20px, 3vw, 32px);
+  color: var(--text-soft);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+/* תמונה בודדת לא גבוהה ממסך אחד, ולא נחתכת */
+.block--full img {
+  width: auto;
+  max-width: 100%;
+  max-height: var(--screen-max);
+  margin-inline: auto;
+}
+
+/* pair עם תמונות ביחסים שונים: אותו גובה לשתיהן (הרוחב לפי היחס של כל אחת),
+   והשורה כולה לא גבוהה ממסך אחד. --ratio על כל תמונה, --ratios הוא הסכום */
+.block--fit {
+  display: flex;
+  gap: clamp(12px, 2vw, 24px);
+  max-width: calc(var(--screen-max) * var(--ratios));
+  margin-inline: auto;
+  width: 100%;
+}
+
+.block--fit img {
+  flex: var(--ratio) 1 0;
+  min-width: 0;
+}
+
+/* ---------- genre-grid: בנק הדימויים לפי ז'אנר ----------
+   עמודה לכל ז'אנר. האיורים נצבעים ב-CSS: קובץ ה-SVG משמש כמסכה (mask),
+   והצבע הוא --text. כל האיורים באותו גודל, בתיבה ריבועית. */
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(20px, 3vw, 48px);
+  --mx: 0;
+  --my: 0;
+}
+
+.genre-grid__genre {
+  margin-bottom: clamp(16px, 2vw, 28px);
+  color: var(--text-soft);
+  font-size: var(--fs-small);
+  font-weight: 400;
+  font-variation-settings: var(--text-axes);
+  text-align: center;
+}
+
+.genre-grid__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.genre-grid__item {
+  --d: 4px;
+  display: flex;
+  justify-content: center;
+  /* תנועה קלה לפי העכבר או הגלילה (main.js מעדכן את --mx ו---my בין -1 ל-1) */
+  transform: translate3d(calc(var(--mx) * var(--d)), calc(var(--my) * var(--d)), 0);
+  transition: transform 300ms ease-out;
+}
+
+.genre-grid__item[data-depth="2"] { --d: 6px; }
+.genre-grid__item[data-depth="3"] { --d: 9px; }
+.genre-grid__item[data-depth="4"] { --d: 12px; }
+.genre-grid__item[data-depth="5"] { --d: 15px; }
+
+.genre-grid__art {
+  display: block;
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  background: var(--text);
+  -webkit-mask: var(--src) center / contain no-repeat;
+  mask: var(--src) center / contain no-repeat;
+}
+
+@media (max-width: 767px) {
+  /* במובייל: גלילה לרוחב, עמודה לכל ז'אנר (שתיים וחלק נראות, כדי שיהיה ברור שאפשר לגלול) */
+  .genre-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 12px;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    scroll-padding-inline: var(--gutter);
+  }
+
+  .genre-grid__col {
+    scroll-snap-align: start;
+  }
+
+  /* חלופה להשוואה: שתי עמודות, ז'אנר אחרי ז'אנר */
+  .genre-grid--stacked {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: 1fr;
+    overflow-x: visible;
+    margin-inline: 0;
+    padding-inline: 0;
+    gap: 48px;
+  }
+
+  .genre-grid--stacked .genre-grid__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 20px;
+  }
+}
+
 .block--video {
   position: relative;
 }
@@ -771,6 +892,19 @@ ul {
 }
 
 @media (max-width: 767px) {
+  .block--fit {
+    flex-direction: column;
+    max-width: none;
+  }
+
+  .block--fit img {
+    flex: none;
+    width: auto;
+    max-width: 100%;
+    max-height: var(--screen-max);
+    margin-inline: auto;
+  }
+
   .project__body {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -884,6 +1018,11 @@ ul {
   }
 
   .button {
+    transition: none;
+  }
+
+  .genre-grid__item {
+    transform: none;
     transition: none;
   }
 }

@@ -1,0 +1,72 @@
+{
+  "by-the-cover": {
+    "src": "illustrations",
+    "genres": [
+      {
+        "folder": "פנטזיה", "slug": "fantasy", "label": "פנטזיה",
+        "items": [
+          { "src": "בת ים חדש.svg", "name": "mermaid", "label": "בת ים" },
+          { "src": "דרקון.svg", "name": "dragon", "label": "דרקון" },
+          { "src": "חרב.svg", "name": "sword", "label": "חרב" },
+          { "src": "טירה.svg", "name": "castle", "label": "טירה" },
+          { "src": "כדור בדולח.svg", "name": "crystal-ball", "label": "כדור בדולח" },
+          { "src": "כתר.svg", "name": "crown", "label": "כתר" },
+          { "src": "להבה.svg", "name": "flame", "label": "להבה" },
+          { "src": "מכשפה.svg", "name": "witch", "label": "מכשפה" }
+        ]
+      },
+      {
+        "folder": "אימה ומתח", "slug": "thriller-horror", "label": "מתח ואימה",
+        "items": [
+          { "src": "בית ודרך חדש.svg", "name": "house-road", "label": "בית ודרך" },
+          { "src": "גולגולת.svg", "name": "skull", "label": "גולגולת" },
+          { "src": "יד.svg", "name": "hand", "label": "יד" },
+          { "src": "נר.svg", "name": "candle", "label": "נר" },
+          { "src": "סכין.svg", "name": "knife", "label": "סכין" },
+          { "src": "ציפור.svg", "name": "bird", "label": "ציפור" },
+          { "src": "צללית אדם עומד.svg", "name": "standing-figure", "label": "צללית אדם עומד" },
+          { "src": "צללית גב אישה.svg", "name": "woman-back", "label": "צללית גב אישה" }
+        ]
+      },
+      {
+        "folder": "מדע בדיוני", "slug": "sci-fi", "label": "מדע בדיוני",
+        "items": [
+          { "src": "אסטרונאוט.svg", "name": "astronaut", "label": "אסטרונאוט" },
+          { "src": "חללית.svg", "name": "spaceship", "label": "חללית" },
+          { "src": "טיל.svg", "name": "rocket", "label": "טיל" },
+          { "src": "כוכב לכת.svg", "name": "planet", "label": "כוכב לכת" },
+          { "src": "כלי שחמט.svg", "name": "chess-piece", "label": "כלי שחמט" },
+          { "src": "עין.svg", "name": "eye", "label": "עין" },
+          { "src": "צללית פרופיל.svg", "name": "profile", "label": "צללית פרופיל" },
+          { "src": "רובוט.svg", "name": "robot", "label": "רובוט" }
+        ]
+      },
+      {
+        "folder": "ספרות יפה", "slug": "literary", "label": "ספרות יפה",
+        "items": [
+          { "src": "חתולה שחורה.svg", "name": "black-cat", "label": "חתולה שחורה" },
+          { "src": "טלפון.svg", "name": "phone", "label": "טלפון" },
+          { "src": "נעל עקב.svg", "name": "high-heel", "label": "נעל עקב" },
+          { "src": "נערה עם עגיל הפנינה.svg", "name": "pearl-earring", "label": "נערה עם עגיל הפנינה" },
+          { "src": "ענף.svg", "name": "branch", "label": "ענף" },
+          { "src": "פסל.svg", "name": "statue", "label": "פסל" },
+          { "src": "פרי.svg", "name": "fruit", "label": "פרי" },
+          { "src": "צללית ילדים.svg", "name": "children", "label": "צללית ילדים" }
+        ]
+      },
+      {
+        "folder": "רומנטיקה", "slug": "romance", "label": "רומנטיקה",
+        "items": [
+          { "src": "ורד.svg", "name": "rose", "label": "ורד" },
+          { "src": "טבעת.svg", "name": "ring", "label": "טבעת" },
+          { "src": "יד חדש.svg", "name": "hand", "label": "יד" },
+          { "src": "מנעול בצורת לב.svg", "name": "heart-lock", "label": "מנעול בצורת לב" },
+          { "src": "מעטפה.svg", "name": "envelope", "label": "מעטפה" },
+          { "src": "פרחים.svg", "name": "flowers", "label": "פרחים" },
+          { "src": "פרפר.svg", "name": "butterfly", "label": "פרפר" },
+          { "src": "צללית זוג רוקד.svg", "name": "dancing-couple", "label": "צללית זוג רוקד" }
+        ]
+      }
+    ]
+  }
+}

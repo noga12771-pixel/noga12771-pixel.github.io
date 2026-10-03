@@ -44,6 +44,49 @@
   }
 })();
 
+// ---------- תנועה קלה של איורים (genre-grid) ----------
+// בדסקטופ האיורים זזים מעט לפי מיקום העכבר, ובמובייל לפי הגלילה.
+// כל איור זז בעוצמה אחרת (data-depth ב-HTML), וה-CSS מתרגם את --mx ו---my לתזוזה.
+// רק כשהבלוק במסך. עם prefers-reduced-motion אין תנועה.
+(function parallax() {
+  const blocks = document.querySelectorAll("[data-parallax]");
+  if (!blocks.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const visible = new Set();
+  let frame = null;
+  let pointer = { x: 0, y: 0 };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => (e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)));
+  });
+  blocks.forEach((b) => io.observe(b));
+
+  function update() {
+    frame = null;
+    visible.forEach((block) => {
+      if (finePointer) {
+        block.style.setProperty("--mx", pointer.x.toFixed(3));
+        block.style.setProperty("--my", pointer.y.toFixed(3));
+      } else {
+        // -1 כשהבלוק בתחתית המסך, 1 כשהוא בראשו
+        const r = block.getBoundingClientRect();
+        const progress = 1 - (r.top + r.height / 2) / (window.innerHeight / 2);
+        block.style.setProperty("--my", Math.max(-1, Math.min(1, progress)).toFixed(3));
+      }
+    });
+  }
+  const request = () => { if (!frame) frame = requestAnimationFrame(update); };
+
+  if (finePointer) {
+    window.addEventListener("pointermove", (e) => {
+      pointer = { x: (e.clientX / window.innerWidth - 0.5) * 2, y: (e.clientY / window.innerHeight - 0.5) * 2 };
+      request();
+    }, { passive: true });
+  } else {
+    window.addEventListener("scroll", request, { passive: true });
+  }
+})();
+
 // ---------- אפקט הקלדה בשם ----------
 // השם נכתב אות אחר אות, עם סמן מהבהב. מתחיל אחרי שהגופנים נטענו, כדי שהרוחב לא יקפוץ.
 // עם prefers-reduced-motion השם מוצג מיד בשלמותו, בלי הקלדה.

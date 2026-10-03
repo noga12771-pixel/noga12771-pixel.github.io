@@ -40,14 +40,14 @@
 
   <main id="main" class="project">
     <div class="container">
-      <!-- מדיה ראשית: הדמיית המסך עם עמוד הפתיחה של הממשק -->
+      <!-- מדיה ראשית: סרטון הדמיית הממשק (bythecover1motion-web) -->
       <figure class="project__hero">
-        <img src="../../assets/img/by-the-cover/interface-mockup-1200.webp"
-             srcset="../../assets/img/by-the-cover/interface-mockup-1200.webp 1200w, ../../assets/img/by-the-cover/interface-mockup-2400.webp 2400w"
-             sizes="(max-width: 1408px) calc(100vw - 2 * clamp(20px, 5vw, 64px)), 1280px"
-             width="1200" height="900"
-             fetchpriority="high"
-             alt="הדמיית מסך מחשב עם עמוד הפתיחה של ממשק לפי הכריכה: בנק הדימויים המאוירים סביב הלוגו">
+        <video data-inview muted loop playsinline preload="metadata"
+               poster="../../assets/img/by-the-cover/interface-demo-poster-1080.webp"
+               width="1080" height="864"
+               aria-label="סרטון: הדמיית השאלון בממשק לפי הכריכה, שלב אחר שלב">
+          <source src="../../assets/video/by-the-cover/interface-demo.mp4" type="video/mp4">
+        </video>
       </figure>
 
       <header class="project__head">
@@ -101,7 +101,7 @@
     </div>
 
     <div class="container gallery">
-      <!-- הצעה לאישור: סטורי לרוחב 1 -->
+      <!-- סטורי לרוחב 1 (bythecover2motion-web) -->
       <figure class="block block--video">
         <video data-inview muted loop playsinline preload="none"
                poster="../../assets/img/by-the-cover/genre-story-poster-1280.webp"
@@ -111,7 +111,7 @@
         </video>
       </figure>
 
-      <!-- הצעה לאישור: סטורי לרוחב 2 -->
+      <!-- סטורי לרוחב 2 (bythecover4motion-web) -->
       <figure class="block block--video">
         <video data-inview muted loop playsinline preload="none"
                poster="../../assets/img/by-the-cover/library-story-poster-1280.webp"
@@ -121,29 +121,102 @@
         </video>
       </figure>
 
-      <!-- כריכה מודפסת לדוגמה (הדמיית הגלויה) -->
-      <figure class="block block--full">
-        <img src="../../assets/img/by-the-cover/cover-postcard-1200.webp"
-             srcset="../../assets/img/by-the-cover/cover-postcard-1200.webp 1200w, ../../assets/img/by-the-cover/cover-postcard-2400.webp 2400w"
-             sizes="(max-width: 1408px) calc(100vw - 2 * clamp(20px, 5vw, 64px)), 1280px"
-             width="1200" height="1440"
-             loading="lazy"
-             alt="כריכה מודפסת לדוגמה: כריכה צהובה עם דימוי מאויר בשחור, ולצידה גב הכריכה עם התקציר">
-      </figure>
-
-      <!-- placeholder: בנק הדימויים. ממתין לקבצי SVG מנוגה -->
-      <figure class="block block--grid">
-        <div class="placeholder block__placeholder">בנק הדימויים: 12 עד 16 דימויים מאוירים כקבצי SVG<br>(ממתין לקבצים)</div>
-      </figure>
-
-      <!-- הצעה לאישור: סרטון ההדמיה מהמצגת -->
+      <!-- בניית הכריכה (bythecover5motion-web) -->
       <figure class="block block--video">
         <video data-inview muted loop playsinline preload="none"
-               poster="../../assets/img/by-the-cover/interface-demo-poster-1080.webp"
-               width="1080" height="864"
-               aria-label="סרטון: הדמיית השאלון בממשק, שלב אחר שלב">
-          <source src="../../assets/video/by-the-cover/interface-demo.mp4" type="video/mp4">
+               poster="../../assets/img/by-the-cover/cover-builder-story-poster-1280.webp"
+               width="1280" height="640"
+               aria-label="סרטון: בניית כריכה בממשק, שלב אחר שלב">
+          <source src="../../assets/video/by-the-cover/cover-builder-story.mp4" type="video/mp4">
         </video>
+      </figure>
+
+      <!-- כריכה מודפסת לדוגמה, ולצידה הדמיית המסך. גובה מקסימלי: מסך אחד, בלי חיתוך -->
+      <div class="block block--pair block--fit" style="--ratios: 2.167">
+        <img style="--ratio: 0.833"
+             src="../../assets/img/by-the-cover/cover-postcard-1200.webp"
+             srcset="../../assets/img/by-the-cover/cover-postcard-1200.webp 1200w, ../../assets/img/by-the-cover/cover-postcard-2400.webp 2400w"
+             sizes="(max-width: 767px) 100vw, 40vw"
+             width="1200" height="1440" loading="lazy"
+             alt="כריכה מודפסת לדוגמה: כריכה צהובה עם דימוי מאויר בשחור, ולצידה גב הכריכה עם התקציר">
+        <img style="--ratio: 1.333"
+             src="../../assets/img/by-the-cover/interface-mockup-1200.webp"
+             srcset="../../assets/img/by-the-cover/interface-mockup-1200.webp 1200w, ../../assets/img/by-the-cover/interface-mockup-2400.webp 2400w"
+             sizes="(max-width: 767px) 100vw, 60vw"
+             width="1200" height="900" loading="lazy"
+             alt="הדמיית מסך מחשב עם עמוד הפתיחה של ממשק לפי הכריכה: בנק הדימויים המאוירים סביב הלוגו">
+      </div>
+
+      <!-- בנק הדימויים לפי ז'אנר (genre-grid). האיורים מ-assets/img/by-the-cover/illustrations -->
+      <figure class="block block--genre-grid">
+        <p class="block__label">מתוך בנק הדימויים, לפי ז'אנר</p>
+        <div class="genre-grid" data-parallax>
+          <section class="genre-grid__col" aria-label="פנטזיה">
+            <h3 class="genre-grid__genre">פנטזיה</h3>
+            <ul class="genre-grid__list">
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="בת ים" style="--src: url('../../assets/img/by-the-cover/illustrations/fantasy/mermaid.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="דרקון" style="--src: url('../../assets/img/by-the-cover/illustrations/fantasy/dragon.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="חרב" style="--src: url('../../assets/img/by-the-cover/illustrations/fantasy/sword.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="2"><span class="genre-grid__art" role="img" aria-label="טירה" style="--src: url('../../assets/img/by-the-cover/illustrations/fantasy/castle.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="4"><span class="genre-grid__art" role="img" aria-label="כדור בדולח" style="--src: url('../../assets/img/by-the-cover/illustrations/fantasy/crystal-ball.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="כתר" style="--src: url('../../assets/img/by-the-cover/illustrations/fantasy/crown.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="להבה" style="--src: url('../../assets/img/by-the-cover/illustrations/fantasy/flame.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="מכשפה" style="--src: url('../../assets/img/by-the-cover/illustrations/fantasy/witch.svg')"></span></li>
+            </ul>
+          </section>
+          <section class="genre-grid__col" aria-label="מתח ואימה">
+            <h3 class="genre-grid__genre">מתח ואימה</h3>
+            <ul class="genre-grid__list">
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="בית ודרך" style="--src: url('../../assets/img/by-the-cover/illustrations/thriller-horror/house-road.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="גולגולת" style="--src: url('../../assets/img/by-the-cover/illustrations/thriller-horror/skull.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="יד" style="--src: url('../../assets/img/by-the-cover/illustrations/thriller-horror/hand.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="2"><span class="genre-grid__art" role="img" aria-label="נר" style="--src: url('../../assets/img/by-the-cover/illustrations/thriller-horror/candle.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="4"><span class="genre-grid__art" role="img" aria-label="סכין" style="--src: url('../../assets/img/by-the-cover/illustrations/thriller-horror/knife.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="ציפור" style="--src: url('../../assets/img/by-the-cover/illustrations/thriller-horror/bird.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="צללית אדם עומד" style="--src: url('../../assets/img/by-the-cover/illustrations/thriller-horror/standing-figure.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="צללית גב אישה" style="--src: url('../../assets/img/by-the-cover/illustrations/thriller-horror/woman-back.svg')"></span></li>
+            </ul>
+          </section>
+          <section class="genre-grid__col" aria-label="מדע בדיוני">
+            <h3 class="genre-grid__genre">מדע בדיוני</h3>
+            <ul class="genre-grid__list">
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="אסטרונאוט" style="--src: url('../../assets/img/by-the-cover/illustrations/sci-fi/astronaut.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="חללית" style="--src: url('../../assets/img/by-the-cover/illustrations/sci-fi/spaceship.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="טיל" style="--src: url('../../assets/img/by-the-cover/illustrations/sci-fi/rocket.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="2"><span class="genre-grid__art" role="img" aria-label="כוכב לכת" style="--src: url('../../assets/img/by-the-cover/illustrations/sci-fi/planet.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="4"><span class="genre-grid__art" role="img" aria-label="כלי שחמט" style="--src: url('../../assets/img/by-the-cover/illustrations/sci-fi/chess-piece.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="עין" style="--src: url('../../assets/img/by-the-cover/illustrations/sci-fi/eye.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="צללית פרופיל" style="--src: url('../../assets/img/by-the-cover/illustrations/sci-fi/profile.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="רובוט" style="--src: url('../../assets/img/by-the-cover/illustrations/sci-fi/robot.svg')"></span></li>
+            </ul>
+          </section>
+          <section class="genre-grid__col" aria-label="ספרות יפה">
+            <h3 class="genre-grid__genre">ספרות יפה</h3>
+            <ul class="genre-grid__list">
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="חתולה שחורה" style="--src: url('../../assets/img/by-the-cover/illustrations/literary/black-cat.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="טלפון" style="--src: url('../../assets/img/by-the-cover/illustrations/literary/phone.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="נעל עקב" style="--src: url('../../assets/img/by-the-cover/illustrations/literary/high-heel.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="2"><span class="genre-grid__art" role="img" aria-label="נערה עם עגיל הפנינה" style="--src: url('../../assets/img/by-the-cover/illustrations/literary/pearl-earring.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="4"><span class="genre-grid__art" role="img" aria-label="ענף" style="--src: url('../../assets/img/by-the-cover/illustrations/literary/branch.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="פסל" style="--src: url('../../assets/img/by-the-cover/illustrations/literary/statue.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="פרי" style="--src: url('../../assets/img/by-the-cover/illustrations/literary/fruit.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="צללית ילדים" style="--src: url('../../assets/img/by-the-cover/illustrations/literary/children.svg')"></span></li>
+            </ul>
+          </section>
+          <section class="genre-grid__col" aria-label="רומנטיקה">
+            <h3 class="genre-grid__genre">רומנטיקה</h3>
+            <ul class="genre-grid__list">
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="ורד" style="--src: url('../../assets/img/by-the-cover/illustrations/romance/rose.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="טבעת" style="--src: url('../../assets/img/by-the-cover/illustrations/romance/ring.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="יד" style="--src: url('../../assets/img/by-the-cover/illustrations/romance/hand.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="2"><span class="genre-grid__art" role="img" aria-label="מנעול בצורת לב" style="--src: url('../../assets/img/by-the-cover/illustrations/romance/heart-lock.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="4"><span class="genre-grid__art" role="img" aria-label="מעטפה" style="--src: url('../../assets/img/by-the-cover/illustrations/romance/envelope.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="1"><span class="genre-grid__art" role="img" aria-label="פרחים" style="--src: url('../../assets/img/by-the-cover/illustrations/romance/flowers.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="3"><span class="genre-grid__art" role="img" aria-label="פרפר" style="--src: url('../../assets/img/by-the-cover/illustrations/romance/butterfly.svg')"></span></li>
+              <li class="genre-grid__item" data-depth="5"><span class="genre-grid__art" role="img" aria-label="צללית זוג רוקד" style="--src: url('../../assets/img/by-the-cover/illustrations/romance/dancing-couple.svg')"></span></li>
+            </ul>
+          </section>
+        </div>
       </figure>
 
       <!-- תמונות מהצגת הגמר -->
@@ -153,11 +226,11 @@
              sizes="(max-width: 767px) 100vw, 420px"
              width="1200" height="1600" loading="lazy"
              alt="מהצגת הגמר: הממשק מוקרן על מסך גדול מול הקהל, עם דימוי של חללית">
-        <img src="../../assets/img/by-the-cover/show-photo-2-1200.webp"
-             srcset="../../assets/img/by-the-cover/show-photo-2-1200.webp 1200w, ../../assets/img/by-the-cover/show-photo-2-2400.webp 2400w"
+        <img src="../../assets/img/by-the-cover/show-photo-laptop-1200.webp"
+             srcset="../../assets/img/by-the-cover/show-photo-laptop-1200.webp 1200w"
              sizes="(max-width: 767px) 100vw, 420px"
              width="1200" height="1600" loading="lazy"
-             alt="מהצגת הגמר: כריכות שעוצבו בממשק מוקרנות מול הקהל">
+             alt="מהצגת הגמר: משתתפת מעצבת כריכה בממשק על מחשב נייד">
         <img src="../../assets/img/by-the-cover/show-photo-3-1200.webp"
              srcset="../../assets/img/by-the-cover/show-photo-3-1200.webp 1200w, ../../assets/img/by-the-cover/show-photo-3-2400.webp 2400w"
              sizes="(max-width: 767px) 100vw, 420px"

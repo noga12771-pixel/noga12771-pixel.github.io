@@ -1,0 +1,234 @@
+{
+  "by-the-cover": [
+    {
+      "slug": "fantasy",
+      "label": "פנטזיה",
+      "items": [
+        {
+          "file": "assets/img/by-the-cover/illustrations/fantasy/mermaid.svg",
+          "label": "בת ים",
+          "ratio": 0.824
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/fantasy/dragon.svg",
+          "label": "דרקון",
+          "ratio": 0.62
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/fantasy/sword.svg",
+          "label": "חרב",
+          "ratio": 0.595
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/fantasy/castle.svg",
+          "label": "טירה",
+          "ratio": 0.753
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/fantasy/crystal-ball.svg",
+          "label": "כדור בדולח",
+          "ratio": 0.809
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/fantasy/crown.svg",
+          "label": "כתר",
+          "ratio": 1.638
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/fantasy/flame.svg",
+          "label": "להבה",
+          "ratio": 0.897
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/fantasy/witch.svg",
+          "label": "מכשפה",
+          "ratio": 1.3
+        }
+      ]
+    },
+    {
+      "slug": "thriller-horror",
+      "label": "מתח ואימה",
+      "items": [
+        {
+          "file": "assets/img/by-the-cover/illustrations/thriller-horror/house-road.svg",
+          "label": "בית ודרך",
+          "ratio": 0.78
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/thriller-horror/skull.svg",
+          "label": "גולגולת",
+          "ratio": 0.908
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/thriller-horror/hand.svg",
+          "label": "יד",
+          "ratio": 0.946
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/thriller-horror/candle.svg",
+          "label": "נר",
+          "ratio": 0.299
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/thriller-horror/knife.svg",
+          "label": "סכין",
+          "ratio": 0.418
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/thriller-horror/bird.svg",
+          "label": "ציפור",
+          "ratio": 0.894
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/thriller-horror/standing-figure.svg",
+          "label": "צללית אדם עומד",
+          "ratio": 0.312
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/thriller-horror/woman-back.svg",
+          "label": "צללית גב אישה",
+          "ratio": 0.337
+        }
+      ]
+    },
+    {
+      "slug": "sci-fi",
+      "label": "מדע בדיוני",
+      "items": [
+        {
+          "file": "assets/img/by-the-cover/illustrations/sci-fi/astronaut.svg",
+          "label": "אסטרונאוט",
+          "ratio": 0.828
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/sci-fi/spaceship.svg",
+          "label": "חללית",
+          "ratio": 1.702
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/sci-fi/rocket.svg",
+          "label": "טיל",
+          "ratio": 1.0
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/sci-fi/planet.svg",
+          "label": "כוכב לכת",
+          "ratio": 1.437
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/sci-fi/chess-piece.svg",
+          "label": "כלי שחמט",
+          "ratio": 0.427
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/sci-fi/eye.svg",
+          "label": "עין",
+          "ratio": 2.027
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/sci-fi/profile.svg",
+          "label": "צללית פרופיל",
+          "ratio": 0.682
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/sci-fi/robot.svg",
+          "label": "רובוט",
+          "ratio": 0.651
+        }
+      ]
+    },
+    {
+      "slug": "literary",
+      "label": "ספרות יפה",
+      "items": [
+        {
+          "file": "assets/img/by-the-cover/illustrations/literary/black-cat.svg",
+          "label": "חתולה שחורה",
+          "ratio": 0.528
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/literary/phone.svg",
+          "label": "טלפון",
+          "ratio": 0.768
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/literary/high-heel.svg",
+          "label": "נעל עקב",
+          "ratio": 1.405
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/literary/pearl-earring.svg",
+          "label": "נערה עם עגיל הפנינה",
+          "ratio": 0.656
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/literary/branch.svg",
+          "label": "ענף",
+          "ratio": 0.788
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/literary/statue.svg",
+          "label": "פסל",
+          "ratio": 0.827
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/literary/fruit.svg",
+          "label": "פרי",
+          "ratio": 0.946
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/literary/children.svg",
+          "label": "צללית ילדים",
+          "ratio": 1.035
+        }
+      ]
+    },
+    {
+      "slug": "romance",
+      "label": "רומנטיקה",
+      "items": [
+        {
+          "file": "assets/img/by-the-cover/illustrations/romance/rose.svg",
+          "label": "ורד",
+          "ratio": 0.773
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/romance/ring.svg",
+          "label": "טבעת",
+          "ratio": 0.861
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/romance/hand.svg",
+          "label": "יד",
+          "ratio": 0.548
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/romance/heart-lock.svg",
+          "label": "מנעול בצורת לב",
+          "ratio": 0.669
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/romance/envelope.svg",
+          "label": "מעטפה",
+          "ratio": 1.112
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/romance/flowers.svg",
+          "label": "פרחים",
+          "ratio": 0.701
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/romance/butterfly.svg",
+          "label": "פרפר",
+          "ratio": 1.689
+        },
+        {
+          "file": "assets/img/by-the-cover/illustrations/romance/dancing-couple.svg",
+          "label": "צללית זוג רוקד",
+          "ratio": 0.513
+        }
+      ]
+    }
+  ]
+}
