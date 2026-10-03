@@ -59,6 +59,7 @@ portfolio/
 ├── raw/                       ← הקבצים המקוריים שלי. לא עולה ל-GitHub
 │   ├── <slug>/                ← תיקיית מקור לכל פרויקט, לפי ה-slug
 │   ├── portrait.png           ← הדיוקן המקורי (רקע שקוף)
+│   ├── cursor/                ← קובצי הסמן המקוריים (mouse cursor.svg, mouse cursor hover.svg)
 │   └── Mooldet Font-Regular.otf
 ├── scripts/                   ← סקריפטים לדחיסת מדיה
 └── .gitignore                 ← כולל את raw/
@@ -136,7 +137,7 @@ portfolio/
 
 ### סמן עכבר
 
-- **הקבצים:** `assets/cursor/cursor.svg` (כוכב קווי, מצב רגיל) ו-`assets/cursor/cursor-hover.svg` (כוכב מלא, מעל משהו לחיץ). המקור: הקבצים "mouse cursor.svg" ו-"mouse cursor hover.svg" של נוגה. שניהם בצבע `--accent`.
+- **הקבצים:** `assets/cursor/cursor.svg` (כוכב קווי, מצב רגיל) ו-`assets/cursor/cursor-hover.svg` (כוכב מלא, מעל משהו לחיץ). המקור: הקבצים "mouse cursor.svg" ו-"mouse cursor hover.svg" של נוגה, ב-`raw/cursor/`. שניהם בצבע `--accent`.
 - **גודל:** 22px. מרכז הכוכב הוא נקודת ההצבעה.
 - **על משהו לחיץ** (קישור, כפתור, כרטיס פרויקט, פקדים) הכוכב הקווי מתחלף לכוכב המלא. בלי סיבוב ובלי מעבר.
 - ה-SVG נטען לתוך הדף (ולא כ-`<img>`), כדי שאפשר יהיה לקבוע עובי קו: הקו בקובץ דק מדי ביחס לגודל הסמן, ולכן הוא מוצג בעובי קבוע של 1.5px (`vector-effect: non-scaling-stroke`). לכל קובץ ניתנת קידומת לשמות המחלקות הפנימיים, כי שני הקבצים משתמשים באותו שם (`cls-1`) והסגנונות היו דורסים זה את זה.
