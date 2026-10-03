@@ -49,6 +49,14 @@
   });
 })();
 
+// ---------- swap: החלפת תמונה בלחיצה ----------
+// בדסקטופ ההחלפה קורית בריחוף (CSS). לחיצה, הקשה או Enter מקבעים את ההחלפה.
+document.querySelectorAll("[data-swap]").forEach((button) => {
+  button.addEventListener("click", () => {
+    button.setAttribute("aria-pressed", String(button.getAttribute("aria-pressed") !== "true"));
+  });
+});
+
 // ---------- "בחזרה למעלה" ----------
 // קישורים ל-#top (הסמל ב-header בעמוד הבית, "בחזרה למעלה" בתחתית עמוד פרויקט)
 // גוללים לראש העמוד: גלילה חלקה, ועם prefers-reduced-motion קפיצה מיידית.

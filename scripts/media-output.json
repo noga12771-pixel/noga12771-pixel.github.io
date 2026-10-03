@@ -487,6 +487,21 @@
           "kb": 24
         }
       ]
+    },
+    "logotype-1987": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/logotype-1987-459.webp",
+          "width": 459,
+          "height": 650,
+          "kb": 60
+        }
+      ]
+    },
+    "logo": {
+      "type": "svg",
+      "file": "assets/img/haifa-kids-festival/logo.svg"
     }
   },
   "du-hayim": {

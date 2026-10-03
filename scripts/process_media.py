@@ -12,6 +12,7 @@
           קובץ גדול מ-5.5MB לא מועתק, והסקריפט מדווח עליו.
           סרט עם קול ונגן (סוג "film" ב-media.json, למשל סרט תדמית) מותר עד 25MB.
           ליצירת ה-poster צריך את הספרייה PyAV:  python -m pip install --user av
+SVG: מועתק כמו שהוא (בלי המרה), בשם באנגלית.
 
 הרצה (מתיקיית הפרויקט):
     python scripts/process_media.py              כל הפרויקטים
@@ -119,7 +120,14 @@ def main():
             if not src.exists():
                 print(f"  חסר קובץ מקור: {src.relative_to(ROOT)}")
                 continue
-            if src.suffix.lower() in VIDEO_EXTS:
+            if src.suffix.lower() == ".svg":
+                # SVG נשאר SVG: מועתק כמו שהוא, בשם באנגלית
+                print(f"  SVG: {name}")
+                dst = IMG_OUT / slug / f"{name}.svg"
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src, dst)
+                output[slug][name] = {"type": "svg", "file": dst.relative_to(ROOT).as_posix()}
+            elif src.suffix.lower() in VIDEO_EXTS:
                 print(f"  סרטון: {name}")
                 result = process_video(src, slug, name, force, item.get("poster_at", 1.0),
                                        item.get("type", "video"))

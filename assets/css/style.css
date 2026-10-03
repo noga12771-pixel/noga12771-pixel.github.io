@@ -62,6 +62,7 @@
 
   /* תנועה */
   --zoom-duration: 450ms;
+  --swap-duration: 350ms;
   --hover-duration: 150ms;
 }
 
@@ -862,6 +863,61 @@ ul {
   color: var(--text-hover);
 }
 
+/* ---------- swap: תמונה שמתחלפת לתמונה אחרת ----------
+   בריחוף (דסקטופ) או בהקשה (מגע ומקלדת) התמונה הראשונה מתחלפת בשנייה, באותה מסגרת.
+   התמונה השנייה על רקע לבן, כי הלוגו בכחול כהה ולא היה נראה על הרקע הכהה. */
+.block--swap .block__label {
+  max-width: var(--text-width);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.swap {
+  position: relative;
+  display: block;
+  width: min(100%, 459px);
+  margin-inline: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.swap__a {
+  width: 100%;
+  height: auto;
+}
+
+.swap__b {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 12%;
+  background: #FFFFFF;
+  opacity: 0;
+  transition: opacity var(--swap-duration) ease;
+}
+
+.swap__b img {
+  width: 100%;
+  height: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .swap:hover .swap__b {
+    opacity: 1;
+  }
+}
+
+.swap[aria-pressed="true"] .swap__b {
+  opacity: 1;
+}
+
+.swap:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 6px;
+}
+
 /* ---------- film: סרט עם קול, כנגן רגיל ---------- */
 .block--film video {
   width: 100%;
@@ -1154,6 +1210,10 @@ ul {
   }
 
   .button {
+    transition: none;
+  }
+
+  .swap__b {
     transition: none;
   }
 
