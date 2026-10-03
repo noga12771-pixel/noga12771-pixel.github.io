@@ -1,6 +1,18 @@
 // תיק העבודות של נוגה נחמן
 // בהמשך ייכנס כאן גם שדה ההתנסות בגופן מולדת.
 
+// ---------- "בחזרה למעלה" ----------
+// קישורים ל-#top (הסמל ב-header בעמוד הבית, "בחזרה למעלה" בתחתית עמוד פרויקט)
+// גוללים לראש העמוד: גלילה חלקה, ועם prefers-reduced-motion קפיצה מיידית.
+// בלי JavaScript, הקישור עדיין עובד כעוגן רגיל.
+document.addEventListener("click", (e) => {
+  const link = e.target instanceof Element && e.target.closest('a[href="#top"]');
+  if (!link) return;
+  e.preventDefault();
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: reduce ? "instant" : "smooth" });
+});
+
 // ---------- סרטונים בלולאה ----------
 // סרטון עם data-inview מתנגן רק כשהוא נמצא במסך, ונעצר כשהוא יוצא ממנו.
 // עם prefers-reduced-motion הוא לא מתנגן, ומוצגת תמונת ה-poster.
