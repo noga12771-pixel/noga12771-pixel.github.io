@@ -58,7 +58,7 @@
   --dash: 1px dashed var(--line);
 
   /* תנועה */
-  --swap-duration: 350ms;
+  --zoom-duration: 450ms;
   --hover-duration: 150ms;
 }
 
@@ -432,7 +432,7 @@ ul {
 .card__media {
   position: relative;
   overflow: hidden;
-  background: var(--surface);
+  background: var(--media-bg, var(--surface));
   aspect-ratio: 4 / 3;
 }
 
@@ -443,19 +443,23 @@ ul {
   height: 100%;
 }
 
-.card__media img {
+.card__media img,
+.card__media video {
   object-fit: cover;
+  transition: transform var(--zoom-duration) ease;
 }
 
-/* בריחוף מוצגת תמונה שנייה מהפרויקט */
-.card__media img + img {
-  opacity: 0;
-  transition: opacity var(--swap-duration) ease;
+/* סרטון ביחס אחר מ-4:3 עם רקע אחיד: מוצג בשלמותו, והמסגרת נצבעת ברקע שלו
+   (--media-bg על card__media), כך שלא רואים פסים ושום דבר לא נחתך */
+.card__media .is-contained {
+  object-fit: contain;
 }
 
+/* בריחוף התמונה (או הסרטון) מתקרבת ב-10% בתוך המסגרת. המסגרת לא משתנה (overflow: hidden) */
 @media (hover: hover) and (pointer: fine) {
-  .card:hover .card__media img + img {
-    opacity: 1;
+  .card:hover .card__media img,
+  .card:hover .card__media video {
+    transform: scale(1.1);
   }
 }
 
@@ -530,9 +534,11 @@ ul {
     transition: none;
   }
 
-  .card__media img + img,
-  .card:hover .card__media img + img {
-    opacity: 0;
+  .card__media img,
+  .card__media video,
+  .card:hover .card__media img,
+  .card:hover .card__media video {
+    transform: none;
     transition: none;
   }
 

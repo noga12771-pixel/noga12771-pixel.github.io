@@ -33,6 +33,132 @@
           "kb": 47
         }
       ]
+    },
+    "interface-demo": {
+      "type": "video",
+      "file": "assets/video/by-the-cover/interface-demo.mp4",
+      "mb": 2.58,
+      "duration": 30.8,
+      "width": 1080,
+      "height": 864,
+      "poster": [
+        {
+          "file": "assets/img/by-the-cover/interface-demo-poster-1080.webp",
+          "width": 1080,
+          "height": 864,
+          "kb": 5
+        }
+      ]
+    },
+    "genre-story": {
+      "type": "video",
+      "file": "assets/video/by-the-cover/genre-story.mp4",
+      "mb": 4.58,
+      "duration": 30.0,
+      "width": 1280,
+      "height": 640,
+      "poster": [
+        {
+          "file": "assets/img/by-the-cover/genre-story-poster-1280.webp",
+          "width": 1280,
+          "height": 640,
+          "kb": 12
+        },
+        {
+          "file": "assets/img/by-the-cover/genre-story-poster-1200.webp",
+          "width": 1200,
+          "height": 600,
+          "kb": 12
+        }
+      ]
+    },
+    "library-story": {
+      "type": "video",
+      "file": "assets/video/by-the-cover/library-story.mp4",
+      "mb": 2.68,
+      "duration": 15.6,
+      "width": 1280,
+      "height": 640,
+      "poster": [
+        {
+          "file": "assets/img/by-the-cover/library-story-poster-1280.webp",
+          "width": 1280,
+          "height": 640,
+          "kb": 13
+        },
+        {
+          "file": "assets/img/by-the-cover/library-story-poster-1200.webp",
+          "width": 1200,
+          "height": 600,
+          "kb": 12
+        }
+      ]
+    },
+    "cover-builder-story": {
+      "type": "video",
+      "file": "assets/video/by-the-cover/cover-builder-story.mp4",
+      "mb": 1.42,
+      "duration": 15.6,
+      "width": 1280,
+      "height": 640,
+      "poster": [
+        {
+          "file": "assets/img/by-the-cover/cover-builder-story-poster-1280.webp",
+          "width": 1280,
+          "height": 640,
+          "kb": 19
+        },
+        {
+          "file": "assets/img/by-the-cover/cover-builder-story-poster-1200.webp",
+          "width": 1200,
+          "height": 600,
+          "kb": 17
+        }
+      ]
+    },
+    "interface-laptop": {
+      "type": "video",
+      "file": "assets/video/by-the-cover/interface-laptop.mp4",
+      "mb": 2.11,
+      "duration": 8.5,
+      "width": 2560,
+      "height": 1280,
+      "poster": [
+        {
+          "file": "assets/img/by-the-cover/interface-laptop-poster-2400.webp",
+          "width": 2400,
+          "height": 1200,
+          "kb": 48
+        },
+        {
+          "file": "assets/img/by-the-cover/interface-laptop-poster-1200.webp",
+          "width": 1200,
+          "height": 600,
+          "kb": 22
+        }
+      ]
+    },
+    "font-picker-story": {
+      "type": "video",
+      "file": "assets/video/by-the-cover/font-picker-story.mp4",
+      "mb": 1.99,
+      "duration": 8.8,
+      "width": 1280,
+      "height": 640,
+      "poster": [
+        {
+          "file": "assets/img/by-the-cover/font-picker-story-poster-1280.webp",
+          "width": 1280,
+          "height": 640,
+          "kb": 26
+        },
+        {
+          "file": "assets/img/by-the-cover/font-picker-story-poster-1200.webp",
+          "width": 1200,
+          "height": 600,
+          "kb": 24
+        }
+      ]
     }
   },
   "haifa-kids-festival": {
@@ -69,6 +195,124 @@
           "kb": 163
         }
       ]
+    },
+    "mockups": {
+      "type": "video",
+      "file": "assets/video/haifa-kids-festival/mockups.mp4",
+      "mb": 4.36,
+      "duration": 36.2,
+      "width": 1280,
+      "height": 720,
+      "poster": [
+        {
+          "file": "assets/img/haifa-kids-festival/mockups-poster-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "kb": 218
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/mockups-poster-1200.webp",
+          "width": 1200,
+          "height": 675,
+          "kb": 189
+        }
+      ]
+    },
+    "exhibition-screens-a": {
+      "type": "video",
+      "file": "assets/video/haifa-kids-festival/exhibition-screens-a.mp4",
+      "mb": 4.32,
+      "duration": 11.9,
+      "width": 480,
+      "height": 848,
+      "poster": [
+        {
+          "file": "assets/img/haifa-kids-festival/exhibition-screens-a-poster-480.webp",
+          "width": 480,
+          "height": 848,
+          "kb": 31
+        }
+      ]
+    },
+    "exhibition-booklet-a": {
+      "type": "video",
+      "file": "assets/video/haifa-kids-festival/exhibition-booklet-a.mp4",
+      "mb": 3.93,
+      "duration": 6.6,
+      "width": 480,
+      "height": 848,
+      "poster": [
+        {
+          "file": "assets/img/haifa-kids-festival/exhibition-booklet-a-poster-480.webp",
+          "width": 480,
+          "height": 848,
+          "kb": 41
+        }
+      ]
+    },
+    "exhibition-booklet-b": {
+      "type": "video",
+      "file": "assets/video/haifa-kids-festival/exhibition-booklet-b.mp4",
+      "mb": 3.21,
+      "duration": 4.6,
+      "width": 480,
+      "height": 848,
+      "poster": [
+        {
+          "file": "assets/img/haifa-kids-festival/exhibition-booklet-b-poster-480.webp",
+          "width": 480,
+          "height": 848,
+          "kb": 53
+        }
+      ]
+    },
+    "exhibition-website-a": {
+      "type": "video",
+      "file": "assets/video/haifa-kids-festival/exhibition-website-a.mp4",
+      "mb": 3.37,
+      "duration": 7.6,
+      "width": 480,
+      "height": 848,
+      "poster": [
+        {
+          "file": "assets/img/haifa-kids-festival/exhibition-website-a-poster-480.webp",
+          "width": 480,
+          "height": 848,
+          "kb": 36
+        }
+      ]
+    },
+    "exhibition-screens-b": {
+      "type": "video",
+      "file": "assets/video/haifa-kids-festival/exhibition-screens-b.mp4",
+      "mb": 3.87,
+      "duration": 9.9,
+      "width": 480,
+      "height": 848,
+      "poster": [
+        {
+          "file": "assets/img/haifa-kids-festival/exhibition-screens-b-poster-480.webp",
+          "width": 480,
+          "height": 848,
+          "kb": 27
+        }
+      ]
+    },
+    "exhibition-website-b": {
+      "type": "video",
+      "file": "assets/video/haifa-kids-festival/exhibition-website-b.mp4",
+      "mb": 2.65,
+      "duration": 5.4,
+      "width": 480,
+      "height": 848,
+      "poster": [
+        {
+          "file": "assets/img/haifa-kids-festival/exhibition-website-b-poster-480.webp",
+          "width": 480,
+          "height": 848,
+          "kb": 30
+        }
+      ]
     }
   },
   "du-hayim": {
@@ -103,6 +347,28 @@
           "width": 1200,
           "height": 901,
           "kb": 37
+        }
+      ]
+    },
+    "page-flip": {
+      "type": "video",
+      "file": "assets/video/du-hayim/page-flip.mp4",
+      "mb": 4.69,
+      "duration": 9.4,
+      "width": 1280,
+      "height": 720,
+      "poster": [
+        {
+          "file": "assets/img/du-hayim/page-flip-poster-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "kb": 47
+        },
+        {
+          "file": "assets/img/du-hayim/page-flip-poster-1200.webp",
+          "width": 1200,
+          "height": 675,
+          "kb": 42
         }
       ]
     }
@@ -177,6 +443,38 @@
           "kb": 99
         }
       ]
+    },
+    "landing-page": {
+      "type": "video",
+      "file": "assets/video/checkcheck/landing-page.mp4",
+      "mb": 2.73,
+      "duration": 6.3,
+      "width": 864,
+      "height": 1080,
+      "poster": [
+        {
+          "file": "assets/img/checkcheck/landing-page-poster-864.webp",
+          "width": 864,
+          "height": 1080,
+          "kb": 12
+        }
+      ]
+    },
+    "extension-demo": {
+      "type": "video",
+      "file": "assets/video/checkcheck/extension-demo.mp4",
+      "mb": 1.44,
+      "duration": 20.6,
+      "width": 864,
+      "height": 1080,
+      "poster": [
+        {
+          "file": "assets/img/checkcheck/extension-demo-poster-864.webp",
+          "width": 864,
+          "height": 1080,
+          "kb": 16
+        }
+      ]
     }
   },
   "moledet-font": {
@@ -211,6 +509,28 @@
           "width": 1200,
           "height": 1600,
           "kb": 13
+        }
+      ]
+    },
+    "motion": {
+      "type": "video",
+      "file": "assets/video/moledet-font/motion.mp4",
+      "mb": 3.67,
+      "duration": 50.2,
+      "width": 1280,
+      "height": 720,
+      "poster": [
+        {
+          "file": "assets/img/moledet-font/motion-poster-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "kb": 8
+        },
+        {
+          "file": "assets/img/moledet-font/motion-poster-1200.webp",
+          "width": 1200,
+          "height": 675,
+          "kb": 7
         }
       ]
     }

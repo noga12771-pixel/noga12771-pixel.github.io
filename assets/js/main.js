@@ -1,6 +1,26 @@
 // תיק העבודות של נוגה נחמן
-// בהמשך ייכנסו כאן גם: ניגון סרטונים רק כשהם במסך (IntersectionObserver),
-// התאמה ל-prefers-reduced-motion, ושדה ההתנסות בגופן מולדת.
+// בהמשך ייכנס כאן גם שדה ההתנסות בגופן מולדת.
+
+// ---------- סרטונים בלולאה ----------
+// סרטון עם data-inview מתנגן רק כשהוא נמצא במסך, ונעצר כשהוא יוצא ממנו.
+// עם prefers-reduced-motion הוא לא מתנגן, ומוצגת תמונת ה-poster.
+(function inViewVideos() {
+  const videos = document.querySelectorAll("video[data-inview]");
+  if (!videos.length || !("IntersectionObserver" in window)) return;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  const observer = new IntersectionObserver((entries) => {
+    for (const { target: video, isIntersecting } of entries) {
+      if (isIntersecting && !reduceMotion.matches) {
+        video.play().catch(() => {}); // דפדפן שחוסם ניגון אוטומטי: נשארת תמונת ה-poster
+      } else {
+        video.pause();
+      }
+    }
+  }, { threshold: 0.25 });
+
+  videos.forEach((video) => observer.observe(video));
+})();
 
 // ---------- סמן עכבר ----------
 // ריבוע קטן שזז עם העכבר בלי עיכוב, והופך למעוין מעל משהו לחיץ.
