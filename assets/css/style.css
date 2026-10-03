@@ -175,6 +175,23 @@ a:hover {
   color: var(--text-hover);
 }
 
+/* בלי מילים יתומות: כותרות נשברות לשורות מאוזנות, וטקסט רץ לא מסתיים במילה בודדת בשורה.
+   בדפדפנים שלא תומכים בזה, main.js מחבר את שתי המילים האחרונות ברווח שלא נשבר */
+h1,
+h2,
+h3,
+.project__subtitle,
+.next-project__name {
+  text-wrap: balance;
+}
+
+p,
+li,
+dd,
+figcaption {
+  text-wrap: pretty;
+}
+
 /* הדגשה: אותו גופן וריאבילי במשקל גבוה יותר */
 strong,
 b {

@@ -31,6 +31,24 @@
   });
 })();
 
+// ---------- בלי מילים יתומות ----------
+// מחבר את שתי המילים האחרונות בכל כותרת ופסקה ברווח שלא נשבר (U+00A0),
+// כך שמילה אחרונה לא תישאר לבד בשורה. גיבוי ל-text-wrap שב-CSS, לדפדפנים שלא תומכים בו.
+(function noOrphans() {
+  const els = document.querySelectorAll("h1, h2, h3, p, li, dd, figcaption, .next-project__name");
+  els.forEach((el) => {
+    if (el.closest("[data-typing], textarea, .site-nav, .site-footer")) return;
+    if (el.textContent.trim().split(/\s+/).length < 3) return;
+    // הרווח האחרון נמצא בצומת הטקסט האחרון שיש בו רווח
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    let last = null;
+    while (walker.nextNode()) {
+      if (/\S\s+\S/.test(walker.currentNode.nodeValue)) last = walker.currentNode;
+    }
+    if (last) last.nodeValue = last.nodeValue.replace(/(\S)\s+(\S+\s*)$/, "$1\u00A0$2");
+  });
+})();
+
 // ---------- "בחזרה למעלה" ----------
 // קישורים ל-#top (הסמל ב-header בעמוד הבית, "בחזרה למעלה" בתחתית עמוד פרויקט)
 // גוללים לראש העמוד: גלילה חלקה, ועם prefers-reduced-motion קפיצה מיידית.
