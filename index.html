@@ -5,25 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>נוגה נחמן | מעצבת ומאיירת</title>
   <meta name="description" content="נוגה נחמן, מעצבת ומאיירת. מיתוג, איור, ספרים ודפוס.">
+  <meta name="theme-color" content="#0D0D0D">
   <!-- favicon זמני (ריק) עד שיגיע הדיוקן המאויר -->
   <link rel="icon" href="data:,">
 
+  <!-- גופן הטקסט: נרקיס יאיר (Adobe Fonts) -->
+  <link rel="stylesheet" href="https://use.typekit.net/vqd6nzr.css">
+  <!-- גופן כותרות זמני עד שיגיע קובץ מולדת -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Secular+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body class="home">
   <a class="skip-link" href="#main">דלג לתוכן</a>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="./">
+  <header class="home-top">
+    <div class="container home-top__inner">
+      <div class="home-id">
         <!-- placeholder: יוחלף ב-assets/illustrations/portrait.png -->
-        <span class="brand__portrait placeholder" aria-hidden="true"></span>
-        נוגה נחמן
-      </a>
+        <div class="portrait placeholder" aria-hidden="true"></div>
+        <div>
+          <h1 class="home-id__name">נוגה נחמן</h1>
+          <p class="home-id__tagline">מעצבת ומאיירת. מיתוג, איור, ספרים ודפוס.</p>
+        </div>
+      </div>
       <nav class="site-nav" aria-label="ניווט ראשי">
         <ul>
           <li><a href="./" aria-current="page">עבודות</a></li>
@@ -33,97 +40,66 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="container intro">
-      <div>
-        <h1 class="intro__name">נוגה נחמן</h1>
-        <p class="intro__tagline">מעצבת ומאיירת. מיתוג, איור, ספרים ודפוס.</p>
-      </div>
-      <!-- placeholder: יוחלף ב-assets/illustrations/portrait.png -->
-      <div class="intro__portrait placeholder">דיוקן מאויר<br>(יגיע בהמשך)</div>
-    </section>
-
-    <section class="container" aria-label="עבודות נבחרות">
-      <ul class="work-grid">
-        <li class="work-grid__item--wide">
-          <a class="card" href="projects/by-the-cover/">
-            <div class="card__media">
-              <div class="placeholder">הדמיית המסך עם עמוד הפתיחה של הממשק</div>
-            </div>
-            <h2 class="card__title">לפי הכריכה</h2>
-            <p class="card__subtitle">ממשק אינטראקטיבי שמעצב כריכה אישית לכל משתתף ומשתתפת</p>
-            <p class="card__domains">איור, UX/UI, פיתוח</p>
-          </a>
-        </li>
-
-        <li class="work-grid__item--narrow">
-          <a class="card" href="projects/haifa-kids-festival/">
-            <div class="card__media">
-              <div class="placeholder">הדמיית קיר הכרזות</div>
-            </div>
-            <h2 class="card__title">להצגות ילדים!</h2>
-            <p class="card__subtitle">מיתוג מחדש לפסטיבל חיפה הבינלאומי להצגות ילדים</p>
-            <p class="card__domains">איור, מיתוג, דפוס</p>
-          </a>
-        </li>
-
-        <li class="work-grid__item--narrow">
-          <a class="card" href="projects/du-hayim/">
-            <div class="card__media">
-              <div class="placeholder">צילום הכריכה הפתוחה (חזית וגב)</div>
-            </div>
-            <h2 class="card__title">דו-חיים</h2>
-            <p class="card__subtitle">מדריך למשחק שלא קיים</p>
-            <p class="card__domains">איור, דפוס, כתיבה</p>
-          </a>
-        </li>
-
-        <li class="work-grid__item--wide">
-          <a class="card" href="projects/aya-korem-vinyl/">
-            <div class="card__media">
-              <div class="placeholder">הדמיית התקליטים המעופפים</div>
-            </div>
-            <h2 class="card__title">לחסד וגאולה המשך ישר</h2>
-            <p class="card__subtitle">עיצוב ואיור עטיפת תקליט וחוברת שירים לאלבום של איה כורם</p>
-            <p class="card__domains">איור, דפוס, מיתוג</p>
-          </a>
-        </li>
-
-        <li class="work-grid__item--wide">
-          <a class="card" href="projects/checkcheck/">
-            <div class="card__media">
-              <div class="placeholder">הדמויות או דף הנחיתה</div>
-            </div>
-            <h2 class="card__title">צ'קצ'ק</h2>
-            <p class="card__subtitle">תוסף דפדפן שקורא את תנאי השימוש בשבילכם</p>
-            <p class="card__domains">איור, UX/UI, מיתוג</p>
-          </a>
-        </li>
-
-        <li class="work-grid__item--narrow">
-          <a class="card" href="projects/moledet-font/">
-            <div class="card__media">
-              <div class="placeholder">פריים מסרטון המושן</div>
-            </div>
-            <h2 class="card__title">גופן מולדת</h2>
-            <p class="card__subtitle">גופן כותרות עברי בהשראת לטרינג משנות הארבעים</p>
-            <p class="card__domains">טיפוגרפיה</p>
-          </a>
-        </li>
-      </ul>
-    </section>
+  <main id="main" class="home-works">
+    <ul class="work-grid" aria-label="עבודות נבחרות">
+      <li>
+        <a class="card" href="projects/by-the-cover/">
+          <div class="card__media">
+            <div class="placeholder">הדמיית המסך עם עמוד הפתיחה של הממשק</div>
+          </div>
+          <h2 class="card__title">לפי הכריכה</h2>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="projects/haifa-kids-festival/">
+          <div class="card__media">
+            <div class="placeholder">הדמיית קיר הכרזות</div>
+          </div>
+          <h2 class="card__title">להצגות ילדים!</h2>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="projects/du-hayim/">
+          <div class="card__media">
+            <div class="placeholder">צילום הכריכה הפתוחה (חזית וגב)</div>
+          </div>
+          <h2 class="card__title">דו-חיים</h2>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="projects/aya-korem-vinyl/">
+          <div class="card__media">
+            <div class="placeholder">הדמיית התקליטים המעופפים</div>
+          </div>
+          <h2 class="card__title">לחסד וגאולה המשך ישר</h2>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="projects/checkcheck/">
+          <div class="card__media">
+            <div class="placeholder">הדמויות או דף הנחיתה</div>
+          </div>
+          <h2 class="card__title">צ'קצ'ק</h2>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="projects/moledet-font/">
+          <div class="card__media">
+            <div class="placeholder">פריים מסרטון המושן</div>
+          </div>
+          <h2 class="card__title">גופן מולדת</h2>
+        </a>
+      </li>
+    </ul>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__frame">
-        <p class="site-footer__name">נוגה נחמן</p>
-        <ul class="site-footer__links">
-          <li><a href="mailto:noga1277@gmail.com">noga1277@gmail.com</a></li>
-          <li><a href="https://www.instagram.com/imnoga/" target="_blank" rel="noopener">אינסטגרם</a></li>
-        </ul>
-        <p class="site-footer__copyright">© 2026 נוגה נחמן</p>
-      </div>
+  <footer class="site-footer site-footer--compact">
+    <div class="container site-footer__inner">
+      <ul class="site-footer__links">
+        <li><a href="mailto:noga1277@gmail.com">noga1277@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/imnoga/" target="_blank" rel="noopener">אינסטגרם</a></li>
+      </ul>
+      <p>© 2026 נוגה נחמן</p>
     </div>
   </footer>
 </body>
