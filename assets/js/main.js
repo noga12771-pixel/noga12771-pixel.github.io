@@ -22,11 +22,41 @@
   videos.forEach((video) => observer.observe(video));
 })();
 
+// ---------- אפקט הקלדה בשם ----------
+// השם נכתב אות אחר אות, עם סמן מהבהב. מתחיל אחרי שהגופנים נטענו, כדי שהרוחב לא יקפוץ.
+// עם prefers-reduced-motion השם מוצג מיד בשלמותו, בלי הקלדה.
+(function typingName() {
+  const el = document.querySelector("[data-typing]");
+  if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const full = el.querySelector(".typing__ghost").textContent.trim();
+  const out = el.querySelector(".typing__text");
+  const START_DELAY = 400; // מילישניות לפני האות הראשונה
+  const LETTER_DELAY = 140; // מילישניות בין אותיות
+
+  el.classList.add("is-typing");
+  const letters = Array.from(full);
+  let i = 0;
+
+  function typeNext() {
+    out.textContent = letters.slice(0, ++i).join("");
+    if (i < letters.length) setTimeout(typeNext, LETTER_DELAY);
+  }
+
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
+    setTimeout(typeNext, START_DELAY);
+  });
+})();
+
 // ---------- סמן עכבר ----------
-// ריבוע קטן שזז עם העכבר בלי עיכוב, והופך למעוין מעל משהו לחיץ.
+// כוכב שזז עם העכבר בלי עיכוב: assets/cursor/cursor.svg במצב רגיל,
+// ומתחלף ל-assets/cursor/cursor-hover.svg מעל משהו לחיץ.
 // רק במכשירים עם עכבר. בשדות טקסט הוא מוסתר ומוצג הסמן של המערכת.
 (function customCursor() {
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+  // הקבצים נטענים יחסית למיקום של main.js, כך שזה עובד מכל עמוד באתר
+  const cursorDir = new URL("../cursor/", document.currentScript.src);
 
   const CLICKABLE = 'a[href], button, [role="button"], label, select, summary, ' +
     'input[type="range"], input[type="checkbox"], input[type="radio"], ' +
@@ -39,9 +69,25 @@
   const cursor = document.createElement("div");
   cursor.className = "cursor";
   cursor.setAttribute("aria-hidden", "true");
-  cursor.innerHTML = '<div class="cursor__shape"></div>';
-  document.body.append(cursor);
-  document.documentElement.classList.add("has-custom-cursor");
+  cursor.innerHTML = '<span class="cursor__icon cursor__icon--normal"></span>' +
+    '<span class="cursor__icon cursor__icon--hover"></span>';
+
+  // ה-SVG נכנס לתוך הדף (ולא כ-<img>), כדי שה-CSS יוכל לקבוע עובי קו שנשאר קריא בגודל קטן.
+  // הסמן הרגיל של המערכת מוסתר רק אחרי ששני הקבצים נטענו.
+  Promise.all(["cursor.svg", "cursor-hover.svg"].map((file) =>
+    fetch(new URL(file, cursorDir)).then((r) => {
+      if (!r.ok) throw new Error(file);
+      return r.text();
+    })
+  )).then(([normal, hover]) => {
+    // שני הקבצים משתמשים באותו שם מחלקה פנימי (cls-1), וסגנון בתוך SVG חל על כל הדף.
+    // לכן כל קובץ מקבל קידומת משלו, אחרת הסגנון של קובץ אחד דורס את השני.
+    const scope = (svg, prefix) => svg.replace(/\bcls-/g, `${prefix}-cls-`);
+    cursor.querySelector(".cursor__icon--normal").innerHTML = scope(normal, "cursor-normal");
+    cursor.querySelector(".cursor__icon--hover").innerHTML = scope(hover, "cursor-hover");
+    document.body.append(cursor);
+    document.documentElement.classList.add("has-custom-cursor");
+  }).catch(() => {}); // אם הקבצים לא נטענו, נשאר הסמן של המערכת
 
   let overTextField = false;
 

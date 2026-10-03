@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>נוגה נחמן | מעצבת ומאיירת</title>
-  <meta name="description" content="נוגה נחמן, מעצבת ומאיירת. עיצוב, מיתוג, איור ודפוס.">
+  <meta name="description" content="נוגה נחמן, מעצבת ומאיירת. עיצוב, איור, מיתוג ודפוס.">
   <meta name="theme-color" content="#0D0D0D">
   <!-- favicon זמני (ריק) עד שיגיע הדיוקן המאויר -->
   <link rel="icon" href="data:,">
@@ -46,8 +46,14 @@
 
   <main id="main">
     <section class="container intro" aria-label="פתיחה">
-      <h1 class="intro__name display-font">נוגה נחמן</h1>
-      <p class="intro__tagline">עיצוב, מיתוג, איור ודפוס.</p>
+      <h1 class="intro__name display-font">
+        <!-- אפקט הקלדה (main.js). הטקסט המלא נשאר בדף לקוראי מסך ולמקרה שאין JavaScript -->
+        <span class="typing" data-typing>
+          <span class="typing__ghost">נוגה נחמן</span>
+          <span class="typing__live" aria-hidden="true"><span class="typing__text"></span><span class="typing__caret"></span></span>
+        </span>
+      </h1>
+      <p class="intro__tagline">עיצוב, איור, מיתוג ודפוס</p>
       <a class="scroll-cue" href="#works">
         <svg class="scroll-cue__arrow" viewBox="0 0 14 28" aria-hidden="true" focusable="false">
           <path d="M7 1v25M1 20l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="square"/>
