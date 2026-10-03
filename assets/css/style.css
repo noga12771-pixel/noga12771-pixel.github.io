@@ -778,6 +778,26 @@ ul {
   min-width: 0;
 }
 
+/* ---------- scan-grid: מקבץ כפולות סרוקות (דו-חיים) ----------
+   5 בשורה, כולן באותו גודל (תיבה 4:3), בלי חיתוך. במובייל 2 בשורה. */
+.block--scan-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(12px, 2vw, 28px);
+}
+
+.block--scan-grid img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .block--scan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ---------- genre-grid: בנק הדימויים לפי ז'אנר ----------
    עמודה לכל ז'אנר. האיורים נצבעים ב-CSS: קובץ ה-SVG משמש כמסכה (mask),
    והצבע הוא --text. כל האיורים באותו גודל, בתיבה ריבועית. */

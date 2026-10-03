@@ -747,6 +747,431 @@
           "kb": 29
         }
       ]
+    },
+    "scan-01": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-01-2400.webp",
+          "width": 2400,
+          "height": 1833,
+          "kb": 578
+        },
+        {
+          "file": "assets/img/du-hayim/scan-01-1200.webp",
+          "width": 1200,
+          "height": 916,
+          "kb": 67
+        }
+      ]
+    },
+    "scan-02": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-02-2400.webp",
+          "width": 2400,
+          "height": 1806,
+          "kb": 576
+        },
+        {
+          "file": "assets/img/du-hayim/scan-02-1200.webp",
+          "width": 1200,
+          "height": 903,
+          "kb": 167
+        }
+      ]
+    },
+    "scan-03": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-03-2400.webp",
+          "width": 2400,
+          "height": 1822,
+          "kb": 448
+        },
+        {
+          "file": "assets/img/du-hayim/scan-03-1200.webp",
+          "width": 1200,
+          "height": 911,
+          "kb": 111
+        }
+      ]
+    },
+    "scan-04": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-04-2400.webp",
+          "width": 2400,
+          "height": 1842,
+          "kb": 489
+        },
+        {
+          "file": "assets/img/du-hayim/scan-04-1200.webp",
+          "width": 1200,
+          "height": 921,
+          "kb": 121
+        }
+      ]
+    },
+    "scan-05": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-05-2400.webp",
+          "width": 2400,
+          "height": 1833,
+          "kb": 578
+        },
+        {
+          "file": "assets/img/du-hayim/scan-05-1200.webp",
+          "width": 1200,
+          "height": 917,
+          "kb": 72
+        }
+      ]
+    },
+    "scan-06": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-06-2400.webp",
+          "width": 2400,
+          "height": 1905,
+          "kb": 540
+        },
+        {
+          "file": "assets/img/du-hayim/scan-06-1200.webp",
+          "width": 1200,
+          "height": 953,
+          "kb": 123
+        }
+      ]
+    },
+    "scan-07": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-07-2400.webp",
+          "width": 2400,
+          "height": 1859,
+          "kb": 505
+        },
+        {
+          "file": "assets/img/du-hayim/scan-07-1200.webp",
+          "width": 1200,
+          "height": 929,
+          "kb": 145
+        }
+      ]
+    },
+    "scan-08": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-08-2400.webp",
+          "width": 2400,
+          "height": 1826,
+          "kb": 538
+        },
+        {
+          "file": "assets/img/du-hayim/scan-08-1200.webp",
+          "width": 1200,
+          "height": 913,
+          "kb": 118
+        }
+      ]
+    },
+    "scan-09": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-09-2400.webp",
+          "width": 2400,
+          "height": 1817,
+          "kb": 594
+        },
+        {
+          "file": "assets/img/du-hayim/scan-09-1200.webp",
+          "width": 1200,
+          "height": 909,
+          "kb": 115
+        }
+      ]
+    },
+    "scan-10": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-10-2400.webp",
+          "width": 2400,
+          "height": 1817,
+          "kb": 551
+        },
+        {
+          "file": "assets/img/du-hayim/scan-10-1200.webp",
+          "width": 1200,
+          "height": 909,
+          "kb": 119
+        }
+      ]
+    },
+    "scan-11": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-11-2400.webp",
+          "width": 2400,
+          "height": 1838,
+          "kb": 598
+        },
+        {
+          "file": "assets/img/du-hayim/scan-11-1200.webp",
+          "width": 1200,
+          "height": 919,
+          "kb": 90
+        }
+      ]
+    },
+    "scan-12": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-12-2400.webp",
+          "width": 2400,
+          "height": 1803,
+          "kb": 537
+        },
+        {
+          "file": "assets/img/du-hayim/scan-12-1200.webp",
+          "width": 1200,
+          "height": 901,
+          "kb": 73
+        }
+      ]
+    },
+    "scan-13": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-13-2400.webp",
+          "width": 2400,
+          "height": 1838,
+          "kb": 706
+        },
+        {
+          "file": "assets/img/du-hayim/scan-13-1200.webp",
+          "width": 1200,
+          "height": 919,
+          "kb": 214
+        }
+      ]
+    },
+    "scan-14": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-14-2400.webp",
+          "width": 2400,
+          "height": 1822,
+          "kb": 457
+        },
+        {
+          "file": "assets/img/du-hayim/scan-14-1200.webp",
+          "width": 1200,
+          "height": 911,
+          "kb": 127
+        }
+      ]
+    },
+    "scan-15": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-15-2400.webp",
+          "width": 2400,
+          "height": 1830,
+          "kb": 496
+        },
+        {
+          "file": "assets/img/du-hayim/scan-15-1200.webp",
+          "width": 1200,
+          "height": 915,
+          "kb": 88
+        }
+      ]
+    },
+    "scan-16": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-16-2400.webp",
+          "width": 2400,
+          "height": 1830,
+          "kb": 502
+        },
+        {
+          "file": "assets/img/du-hayim/scan-16-1200.webp",
+          "width": 1200,
+          "height": 915,
+          "kb": 106
+        }
+      ]
+    },
+    "scan-17": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-17-2400.webp",
+          "width": 2400,
+          "height": 1838,
+          "kb": 476
+        },
+        {
+          "file": "assets/img/du-hayim/scan-17-1200.webp",
+          "width": 1200,
+          "height": 919,
+          "kb": 123
+        }
+      ]
+    },
+    "scan-18": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-18-2400.webp",
+          "width": 2400,
+          "height": 1838,
+          "kb": 520
+        },
+        {
+          "file": "assets/img/du-hayim/scan-18-1200.webp",
+          "width": 1200,
+          "height": 919,
+          "kb": 96
+        }
+      ]
+    },
+    "scan-19": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-19-2400.webp",
+          "width": 2400,
+          "height": 1855,
+          "kb": 483
+        },
+        {
+          "file": "assets/img/du-hayim/scan-19-1200.webp",
+          "width": 1200,
+          "height": 928,
+          "kb": 133
+        }
+      ]
+    },
+    "scan-20": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-20-2400.webp",
+          "width": 2400,
+          "height": 1825,
+          "kb": 492
+        },
+        {
+          "file": "assets/img/du-hayim/scan-20-1200.webp",
+          "width": 1200,
+          "height": 912,
+          "kb": 115
+        }
+      ]
+    },
+    "scan-21": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-21-2400.webp",
+          "width": 2400,
+          "height": 1838,
+          "kb": 513
+        },
+        {
+          "file": "assets/img/du-hayim/scan-21-1200.webp",
+          "width": 1200,
+          "height": 919,
+          "kb": 103
+        }
+      ]
+    },
+    "scan-22": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-22-2400.webp",
+          "width": 2400,
+          "height": 1855,
+          "kb": 454
+        },
+        {
+          "file": "assets/img/du-hayim/scan-22-1200.webp",
+          "width": 1200,
+          "height": 928,
+          "kb": 126
+        }
+      ]
+    },
+    "scan-23": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-23-2400.webp",
+          "width": 2400,
+          "height": 1847,
+          "kb": 488
+        },
+        {
+          "file": "assets/img/du-hayim/scan-23-1200.webp",
+          "width": 1200,
+          "height": 923,
+          "kb": 85
+        }
+      ]
+    },
+    "scan-24": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-24-2400.webp",
+          "width": 2400,
+          "height": 1850,
+          "kb": 521
+        },
+        {
+          "file": "assets/img/du-hayim/scan-24-1200.webp",
+          "width": 1200,
+          "height": 925,
+          "kb": 110
+        }
+      ]
+    },
+    "scan-25": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/scan-25-2400.webp",
+          "width": 2400,
+          "height": 1855,
+          "kb": 478
+        },
+        {
+          "file": "assets/img/du-hayim/scan-25-1200.webp",
+          "width": 1200,
+          "height": 928,
+          "kb": 49
+        }
+      ]
     }
   },
   "aya-korem-vinyl": {
