@@ -1,0 +1,27 @@
+{
+  "by-the-cover": [
+    { "src": "מוקאפ ממשק נוגה נחמן 2.jpg", "name": "interface-mockup" },
+    { "src": "מוקאפ גלויה נוגה נחמן 1.jpg", "name": "cover-postcard" }
+  ],
+  "haifa-kids-festival": [
+    { "src": "Posters_Under_The_Bridge copy.jpg", "name": "poster-wall" },
+    { "src": "IMG-20250706-WA0088.jpg", "name": "illustration-wall" }
+  ],
+  "du-hayim": [
+    { "src": "סריקה/Scan_20260704_231254.jpg", "name": "cover-spread" },
+    { "src": "תמונות/נבחר (7) copy.jpg", "name": "book-photo" }
+  ],
+  "aya-korem-vinyl": [
+    { "src": "מוקאפ copy.jpg", "name": "flying-records" },
+    { "src": "מוקאפ תקליט copy.jpg", "name": "record-sleeve" }
+  ],
+  "checkcheck": [
+    { "src": "Free_iMac_Mockup_2 copy.png", "name": "interface-mockup" },
+    { "src": "תמנוות מההגשה/20260203_122017.jpg", "name": "character-check" }
+  ],
+  "moledet-font": [
+    { "src": "גופן מולדת במושן new.mp4", "name": "motion", "poster_at": 2.0 },
+    { "src": "ספיסמן גופן מולדת להגשה11.jpg", "name": "specimen" },
+    { "src": "פ מודל תלת מימד copy.jpg", "name": "pe-3d" }
+  ]
+}

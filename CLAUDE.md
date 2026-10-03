@@ -527,6 +527,12 @@ OwnIt – חממת המעצבות, מחזור א', תשפ"ו
 
 **איך זה עובד:** אני שמה את הקבצים המקוריים בתיקייה `raw/<slug>/`. אתה כותב סקריפט ב-`scripts/` שמעבד אותם לתוך `assets/img/<slug>/` ו-`assets/video/<slug>/`, ושואל אותי איזה קובץ שייך לאיזה מקום בתוכנית הגלריה.
 
+**הסקריפט:** `scripts/process_media.py` (Python, עם Pillow, ו-ffmpeg לסרטונים).
+- `scripts/media.json`: רשימת הקבצים לעיבוד לכל פרויקט: קובץ מקור ב-`raw/<slug>/` ושם באנגלית. לסרטון אפשר להוסיף `poster_at` (השנייה שממנה נלקחת תמונת ה-poster).
+- הרצה: `python scripts/process_media.py` (כל הפרויקטים) או `python scripts/process_media.py <slug>`. קבצים שכבר עובדו מדולגים; `--force` מעבד מחדש.
+- הפלט: `<name>-<רוחב>.webp` (למשל `poster-wall-2400.webp`), `<name>.mp4` ו-`<name>-poster-<רוחב>.webp`. המידות של כל קובץ נשמרות ב-`scripts/media-output.json`.
+- תמונות PNG עם רקע שקוף נשארות שקופות.
+
 **תמונות:**
 - המרה ל-WebP באיכות של כ-82.
 - שני גדלים לכל תמונה: 2400px ו-1200px ברוחב, ושימוש ב-`srcset` ו-`sizes`.

@@ -1,0 +1,218 @@
+{
+  "by-the-cover": {
+    "interface-mockup": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/by-the-cover/interface-mockup-2400.webp",
+          "width": 2400,
+          "height": 1800,
+          "kb": 58
+        },
+        {
+          "file": "assets/img/by-the-cover/interface-mockup-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "kb": 23
+        }
+      ]
+    },
+    "cover-postcard": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/by-the-cover/cover-postcard-2400.webp",
+          "width": 2400,
+          "height": 2880,
+          "kb": 330
+        },
+        {
+          "file": "assets/img/by-the-cover/cover-postcard-1200.webp",
+          "width": 1200,
+          "height": 1440,
+          "kb": 47
+        }
+      ]
+    }
+  },
+  "haifa-kids-festival": {
+    "poster-wall": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/poster-wall-2400.webp",
+          "width": 2400,
+          "height": 1600,
+          "kb": 409
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/poster-wall-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "kb": 134
+        }
+      ]
+    },
+    "illustration-wall": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/illustration-wall-2048.webp",
+          "width": 2048,
+          "height": 1536,
+          "kb": 347
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/illustration-wall-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "kb": 163
+        }
+      ]
+    }
+  },
+  "du-hayim": {
+    "cover-spread": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/cover-spread-2400.webp",
+          "width": 2400,
+          "height": 1768,
+          "kb": 120
+        },
+        {
+          "file": "assets/img/du-hayim/cover-spread-1200.webp",
+          "width": 1200,
+          "height": 884,
+          "kb": 41
+        }
+      ]
+    },
+    "book-photo": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/du-hayim/book-photo-2400.webp",
+          "width": 2400,
+          "height": 1802,
+          "kb": 93
+        },
+        {
+          "file": "assets/img/du-hayim/book-photo-1200.webp",
+          "width": 1200,
+          "height": 901,
+          "kb": 37
+        }
+      ]
+    }
+  },
+  "aya-korem-vinyl": {
+    "flying-records": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/flying-records-2400.webp",
+          "width": 2400,
+          "height": 2000,
+          "kb": 272
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/flying-records-1200.webp",
+          "width": 1200,
+          "height": 1000,
+          "kb": 56
+        }
+      ]
+    },
+    "record-sleeve": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/record-sleeve-2400.webp",
+          "width": 2400,
+          "height": 1800,
+          "kb": 209
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/record-sleeve-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "kb": 43
+        }
+      ]
+    }
+  },
+  "checkcheck": {
+    "interface-mockup": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/checkcheck/interface-mockup-2400.webp",
+          "width": 2400,
+          "height": 1800,
+          "kb": 71
+        },
+        {
+          "file": "assets/img/checkcheck/interface-mockup-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "kb": 29
+        }
+      ]
+    },
+    "character-check": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/checkcheck/character-check-2400.webp",
+          "width": 2400,
+          "height": 3200,
+          "kb": 366
+        },
+        {
+          "file": "assets/img/checkcheck/character-check-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 99
+        }
+      ]
+    }
+  },
+  "moledet-font": {
+    "specimen": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/moledet-font/specimen-2400.webp",
+          "width": 2400,
+          "height": 3360,
+          "kb": 232
+        },
+        {
+          "file": "assets/img/moledet-font/specimen-1200.webp",
+          "width": 1200,
+          "height": 1680,
+          "kb": 126
+        }
+      ]
+    },
+    "pe-3d": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/moledet-font/pe-3d-2400.webp",
+          "width": 2400,
+          "height": 3200,
+          "kb": 46
+        },
+        {
+          "file": "assets/img/moledet-font/pe-3d-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 13
+        }
+      ]
+    }
+  }
+}
