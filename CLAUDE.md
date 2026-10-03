@@ -392,9 +392,9 @@ portfolio/
 5. `full`: התוכנייה
 6. `pair`: שילוט חוצות ואתר האינטרנט
 7. `full`: קו המוצרים
-8. `pair`: קיר האיור בתערוכה וסרטון מההגשה
+8. `pair`: הדמיית קיר הכרזות וסרטון מההגשה
 
-**שיבוץ קבצים בעמוד (הצעה, ממתין לאישור של נוגה):** 1: `haifa-kids-festival-2motion-web` (הכרזה המונפשת). 2: `כרזות 2`. 3: `לוגוטייפ הראשון` ו-`logo.svg` (בלוק `swap`). 4: `IMG-20250706-WA0169` (קיר האיור, כמו בגריד). 5: `O7DD6A1 copy2` (התוכנייה). 6: `Billboard_Mockup_1` ו-`Free iPhone 16 Pro Mockup`. 7: `haifa-kids-festival-1motion-web` (קו המוצרים, כסרטון). 8: `IMG-20250706-WA0088` ו-`haifa-kids-festival-3motion-web`. (הבלוקים של התקריבים של איורים ושל מפה, הזמנה ומודעת עיתון הוסרו לבקשת נוגה.)
+**שיבוץ קבצים בעמוד (הצעה, ממתין לאישור של נוגה):** 1: `haifa-kids-festival-2motion-web` (הכרזה המונפשת). 2: `כרזות 2`. 3: `לוגוטייפ הראשון` ו-`logo.svg` (בלוק `swap`). 4: `IMG-20250706-WA0169` (קיר האיור, כמו בגריד). 5: `O7DD6A1 copy2` (התוכנייה). 6: `Billboard_Mockup_1` ו-`Free iPhone 16 Pro Mockup`. 7: `haifa-kids-festival-1motion-web` (קו המוצרים, כסרטון). 8: `Posters_Under_The_Bridge copy` ו-`haifa-kids-festival-3motion-web`. (הבלוקים של התקריבים של איורים ושל מפה, הזמנה ומודעת עיתון הוסרו לבקשת נוגה.)
 
 ### 6.4 דו-חיים: מדריך למשחק שלא קיים
 
