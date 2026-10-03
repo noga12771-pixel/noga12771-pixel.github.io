@@ -9,12 +9,14 @@
   <!-- favicon זמני (ריק) עד שיגיע הדיוקן המאויר -->
   <link rel="icon" href="data:,">
 
+  <!-- גופן הכותרות: מולדת -->
+  <link rel="preload" href="assets/fonts/moledet.woff2" as="font" type="font/woff2" crossorigin>
   <!-- גופן הטקסט: נרקיס יאיר (Adobe Fonts) -->
   <link rel="stylesheet" href="https://use.typekit.net/vqd6nzr.css">
-  <!-- גופן כותרות זמני עד שיגיע קובץ מולדת -->
+  <!-- גופני גיבוי: Secular One לכותרות, Assistant לטקסט -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Secular+One&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -24,8 +26,12 @@
   <header class="home-top">
     <div class="container home-top__inner">
       <div class="home-id">
-        <!-- placeholder: יוחלף ב-assets/illustrations/portrait.png -->
-        <div class="portrait placeholder" aria-hidden="true"></div>
+        <img class="portrait"
+             src="assets/illustrations/portrait-240.webp"
+             srcset="assets/illustrations/portrait-240.webp 240w, assets/illustrations/portrait-900.webp 900w"
+             sizes="84px"
+             width="240" height="320"
+             alt="דיוקן מאויר של נוגה נחמן">
         <div>
           <h1 class="home-id__name">נוגה נחמן</h1>
           <p class="home-id__tagline">מעצבת ומאיירת. מיתוג, איור, ספרים ודפוס.</p>

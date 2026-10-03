@@ -4,17 +4,15 @@
    ========================================================== */
 
 /* ---------- גופן מולדת ----------
-   יופעל כשהקובץ assets/fonts/moledet.woff2 יגיע.
-   עד אז הכותרות משתמשות ב-Secular One מ-Google Fonts.
-
+   הגופן של נוגה, לכותרות. כולל אותיות עבריות, ספרות וסימני פיסוק,
+   בלי אותיות לועזיות. Secular One (Google Fonts) הוא הגיבוי. */
 @font-face {
   font-family: "Moledet";
   src: url("../fonts/moledet.woff2") format("woff2");
-  font-weight: 400 900;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-*/
 
 /* ---------- משתנים ---------- */
 :root {
@@ -27,10 +25,14 @@
   --line: #3A3A3A;
   --surface: #1A1A1A;
 
-  /* גופנים. מולדת כולל רק עברית, ספרות ופיסוק,
-     ולכן Secular One משמש גם כ-fallback לאותיות לועזיות */
+  /* גופנים.
+     כותרות: מולדת. Secular One מגבה אותו, וגם משלים אותיות לועזיות שאין במולדת.
+     טקסט: נרקיס יאיר (Adobe Fonts). Assistant (Google Fonts) מגבה אותו
+     אם הערכה לא נטענת. גופן גיבוי יורד רק אם באמת צריך אותו. */
   --font-display: "Moledet", "Secular One", "Arial Hebrew", Arial, sans-serif;
-  --font-text: "narkiss-yair-variable", "David", "Times New Roman", serif;
+  --font-text: "narkiss-yair-variable", "Assistant", "Arial Hebrew", Arial, sans-serif;
+  --text-axes: "MONO" 0, "wght" 400;
+  --text-axes-bold: "MONO" 0, "wght" 700;
 
   /* סקאלה טיפוגרפית */
   --fs-home-name: clamp(36px, min(5vw, 8vh), 72px);
@@ -76,6 +78,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-text);
+  font-variation-settings: var(--text-axes);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   -webkit-font-smoothing: antialiased;
@@ -117,6 +120,13 @@ h3 {
 
 a {
   color: inherit;
+}
+
+/* הדגשה: אותו גופן וריאבילי במשקל גבוה יותר */
+strong,
+b {
+  font-weight: 700;
+  font-variation-settings: var(--text-axes-bold);
 }
 
 ul {
@@ -178,9 +188,11 @@ ul {
   text-align: center;
 }
 
-.portrait.placeholder {
-  padding: 0;
-  border: var(--dash);
+/* ---------- הדיוקן המאויר (יחס 3:4) ---------- */
+.portrait {
+  flex: none;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
 }
 
 /* ---------- ניווט ראשי (עבודות / אודות) ---------- */
@@ -226,8 +238,7 @@ ul {
 }
 
 .brand .portrait {
-  flex: none;
-  width: 40px;
+  width: auto;
   height: 40px;
 }
 
@@ -242,7 +253,6 @@ ul {
   }
 
   .brand .portrait {
-    width: 32px;
     height: 32px;
   }
 
@@ -316,9 +326,8 @@ ul {
 }
 
 .home-id .portrait {
-  flex: none;
-  width: clamp(64px, 11vh, 104px);
-  aspect-ratio: 1 / 1;
+  width: auto;
+  height: clamp(72px, 12vh, 112px);
 }
 
 .home-id__name {
