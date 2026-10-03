@@ -57,6 +57,82 @@ document.querySelectorAll("[data-swap]").forEach((button) => {
   });
 });
 
+// ---------- הגדלה בלחיצה (lightbox) ----------
+// קישור עם data-lightbox (למשל כפולה במקבץ הסריקות) נפתח בגדול בחלון מעל העמוד,
+// עם מעבר לקודמת ולבאה באותו בלוק. סגירה: כפתור, Esc או לחיצה על הרקע.
+// מקלדת: חץ שמאלה לבאה וחץ ימינה לקודמת (כיוון הקריאה בעברית).
+// בלי JavaScript, הקישור פותח את התמונה הגדולה בדפדפן.
+(function lightbox() {
+  const links = [...document.querySelectorAll("a[data-lightbox]")];
+  if (!links.length || typeof HTMLDialogElement !== "function") return;
+
+  const dialog = document.createElement("dialog");
+  dialog.className = "lightbox";
+  dialog.setAttribute("aria-label", "תצוגה מוגדלת");
+  dialog.innerHTML =
+    '<button class="lightbox__close" type="button">סגירה</button>' +
+    '<div class="lightbox__stage"><img class="lightbox__img" alt=""></div>' +
+    '<div class="lightbox__nav">' +
+    '<button class="lightbox__prev" type="button">הקודמת</button>' +
+    '<span class="lightbox__count" dir="ltr" aria-live="polite"></span>' +
+    '<button class="lightbox__next" type="button">הבאה</button>' +
+    "</div>";
+  document.body.append(dialog);
+
+  const img = dialog.querySelector(".lightbox__img");
+  const count = dialog.querySelector(".lightbox__count");
+  let group = [];
+  let index = 0;
+
+  function show(i) {
+    index = (i + group.length) % group.length;
+    const thumb = group[index].querySelector("img");
+    img.src = group[index].href;
+    img.alt = thumb ? thumb.alt : "";
+    count.textContent = `${index + 1} / ${group.length}`;
+  }
+
+  // הסמן המעוצב נמצא ב-body, והחלון מוצג מעל הכל. לכן כשהחלון פתוח הסמן עובר לתוכו.
+  function moveCursor(parent) {
+    const cursor = document.querySelector(".cursor");
+    if (cursor) parent.append(cursor);
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      group = links.filter((l) => l.parentElement === link.parentElement);
+      show(group.indexOf(link));
+      moveCursor(dialog);
+      dialog.showModal();
+    });
+  });
+
+  // הסגירה עוברת תמיד דרך הפונקציה הזאת (גם Esc), כדי שהסמן יחזור לעמוד בכל מקרה
+  function close() {
+    if (dialog.open) dialog.close();
+    moveCursor(document.body);
+    img.removeAttribute("src");
+  }
+
+  dialog.addEventListener("close", close);
+  dialog.querySelector(".lightbox__close").addEventListener("click", close);
+  dialog.querySelector(".lightbox__prev").addEventListener("click", () => show(index - 1));
+  dialog.querySelector(".lightbox__next").addEventListener("click", () => show(index + 1));
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog || e.target.classList.contains("lightbox__stage")) close();
+  });
+  dialog.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      close();
+    }
+    if (e.key === "ArrowLeft") show(index + 1);
+    if (e.key === "ArrowRight") show(index - 1);
+  });
+})();
+
 // ---------- "בחזרה למעלה" ----------
 // קישורים ל-#top (הסמל ב-header בעמוד הבית, "בחזרה למעלה" בתחתית עמוד פרויקט)
 // גוללים לראש העמוד: גלילה חלקה, ועם prefers-reduced-motion קפיצה מיידית.
