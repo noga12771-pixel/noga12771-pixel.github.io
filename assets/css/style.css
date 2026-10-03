@@ -268,9 +268,11 @@ ul {
   display: block;
 }
 
-.home-link .portrait {
-  width: auto;
-  height: calc(var(--header-h) - 24px);
+/* הסמל (כוכב) מימין ב-header. בקובץ יש שוליים ריקים סביב הכוכב (הוא תופס כ-60% מהשטח),
+   ולכן התיבה גדולה מהכוכב הנראה: 64px כאן נותנים כוכב של כ-38px */
+.home-link__icon {
+  width: 64px;
+  height: 64px;
 }
 
 /* מלבן הניווט: מסגרת דקה, פינות מעוגלות מעט, שלוש משבצות ברוחב זהה
@@ -321,8 +323,9 @@ ul {
     gap: 10px;
   }
 
-  .home-link .portrait {
-    height: calc(var(--header-h) - 22px);
+  .home-link__icon {
+    width: 48px;
+    height: 48px;
   }
 
   .site-nav a {
