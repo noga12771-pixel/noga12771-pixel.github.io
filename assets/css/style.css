@@ -27,10 +27,11 @@
 
   /* גופנים.
      כותרות: מולדת. Secular One מגבה אותו, וגם משלים אותיות לועזיות שאין במולדת.
-     טקסט: נרקיס יאיר (Adobe Fonts). Assistant (Google Fonts) מגבה אותו
-     אם הערכה לא נטענת. גופן גיבוי יורד רק אם באמת צריך אותו. */
+     טקסט: נרקיס יאיר (Adobe Fonts). אם הערכה לא נטענת, הגיבוי הוא גופן
+     עברי איכותי שכבר מותקן במכשיר, כך ששום קובץ נוסף לא יורד:
+     Segoe UI (Windows), Arial Hebrew (Mac/iPhone), Noto Sans Hebrew (Android). */
   --font-display: "Moledet", "Secular One", "Arial Hebrew", Arial, sans-serif;
-  --font-text: "narkiss-yair-variable", "Assistant", "Arial Hebrew", Arial, sans-serif;
+  --font-text: "narkiss-yair-variable", "Segoe UI", "Arial Hebrew", "Noto Sans Hebrew", Arial, sans-serif;
   --text-axes: "MONO" 0, "wght" 400;
   --text-axes-bold: "MONO" 0, "wght" 700;
 
