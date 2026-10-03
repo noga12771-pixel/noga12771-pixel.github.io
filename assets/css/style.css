@@ -557,6 +557,18 @@ ul {
   height: auto;
 }
 
+/* מדיה ראשית מוקטנת: 60% מרוחב התוכן, ממורכזת (במובייל ברוחב מלא) */
+.project__hero--small {
+  width: 60%;
+  margin-inline: auto;
+}
+
+@media (max-width: 767px) {
+  .project__hero--small {
+    width: 100%;
+  }
+}
+
 .project__head {
   margin-top: clamp(32px, 5vw, 64px);
 }
@@ -805,23 +817,6 @@ ul {
 
   .genre-grid__col {
     scroll-snap-align: start;
-  }
-
-  /* חלופה להשוואה: שתי עמודות, ז'אנר אחרי ז'אנר */
-  .genre-grid--stacked {
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
-    grid-template-columns: 1fr;
-    overflow-x: visible;
-    margin-inline: 0;
-    padding-inline: 0;
-    gap: 48px;
-  }
-
-  .genre-grid--stacked .genre-grid__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 20px;
   }
 }
 
