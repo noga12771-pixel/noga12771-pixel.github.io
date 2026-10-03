@@ -502,6 +502,23 @@
     "logo": {
       "type": "svg",
       "file": "assets/img/haifa-kids-festival/logo.svg"
+    },
+    "urban-wall-poster": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/haifa-kids-festival/urban-wall-poster-2400.webp",
+          "width": 2400,
+          "height": 1600,
+          "kb": 170
+        },
+        {
+          "file": "assets/img/haifa-kids-festival/urban-wall-poster-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "kb": 68
+        }
+      ]
     }
   },
   "du-hayim": {
