@@ -28,8 +28,8 @@
 
   /* גופנים.
      כותרות: מולדת. Secular One מגבה אותו, וגם משלים אותיות לועזיות שאין במולדת.
-     טקסט: נרקיס יאיר (Adobe Fonts). אם הערכה לא נטענת, הגיבוי הוא גופן
-     עברי איכותי שכבר מותקן במכשיר, כך ששום קובץ נוסף לא יורד:
+     טקסט: נרקיס יאיר, גופן וריאבילי מ-Adobe Fonts (ערכה idz8zhg).
+     הגיבוי הוא גופן עברי איכותי שכבר מותקן במכשיר:
      Segoe UI (Windows), Arial Hebrew (Mac/iPhone), Noto Sans Hebrew (Android). */
   --font-display: "Moledet", "Secular One", "Arial Hebrew", Arial, sans-serif;
   --font-text: "narkiss-yair-variable", "Segoe UI", "Arial Hebrew", "Noto Sans Hebrew", Arial, sans-serif;
