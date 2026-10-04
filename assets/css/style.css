@@ -1464,8 +1464,9 @@ html:has(.lightbox[open]) {
   text-align: center;
 }
 
-.not-found__portrait {
-  width: clamp(160px, 20vw, 240px);
+/* הכוכב מה-header, בגדול. בקובץ יש שוליים ריקים, ולכן הכוכב הנראה קטן מהתיבה */
+.not-found__icon {
+  width: clamp(140px, 16vw, 200px);
   height: auto;
 }
 
