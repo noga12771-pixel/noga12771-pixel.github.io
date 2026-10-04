@@ -1161,6 +1161,12 @@ html:has(.lightbox[open]) {
   field-sizing: content;
 }
 
+/* "תנסו לכתוב כאן..." מוצג כמו טקסט רגיל, ונעלם ברגע שמתחילים להקליד */
+.font-tester__text::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
 .font-tester__text:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
