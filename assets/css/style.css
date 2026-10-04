@@ -1076,75 +1076,18 @@ html:has(.lightbox[open]) {
   background: var(--surface);
 }
 
-/* ---------- שדה התנסות בגופן מולדת (7.2) ---------- */
+/* ---------- שדה התנסות בגופן מולדת (7.2) ----------
+   למעלה "(נסו בעצמכם)", מתחת הטקסט הגדול, ומתחתיו, אחרי קו מקווקו, שורת פקדים:
+   גודל, מרווח ומתג צבעים. כל פקד: שם וערך בשורה אחת, ומתחתיהם הסליידר */
 .font-tester {
   border: var(--dash);
   padding: clamp(20px, 3vw, 40px);
 }
 
-.font-tester__controls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px 32px;
-  margin-bottom: clamp(20px, 3vw, 32px);
-  font-size: var(--fs-small);
-}
-
-.font-tester__size {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.font-tester__size input {
-  width: clamp(140px, 22vw, 260px);
-  accent-color: var(--accent);
-}
-
-.font-tester__size output {
-  min-width: 4.5ch;
+.font-tester__hint {
+  margin-bottom: clamp(16px, 3vw, 40px);
   color: var(--text-soft);
-  font-variant-numeric: tabular-nums;
-}
-
-/* מתג צבעים: שני כפתורי רדיו שנראים כמו מתג */
-.font-tester__theme {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  border: var(--stroke) solid var(--line);
-}
-
-.font-tester__theme label {
-  position: relative;
-}
-
-.font-tester__theme input {
-  position: absolute;
-  opacity: 0;
-  inset: 0;
-  margin: 0;
-}
-
-.font-tester__theme span {
-  display: block;
-  padding: 6px 14px;
-}
-
-.font-tester__theme label + label span {
-  border-inline-start: var(--stroke) solid var(--line);
-}
-
-.font-tester__theme input:checked + span {
-  background: var(--accent);
-  color: var(--bg);
-}
-
-.font-tester__theme input:focus-visible + span {
-  outline: 2px solid var(--text);
-  outline-offset: 2px;
+  font-size: var(--fs-small);
 }
 
 .font-tester__text {
@@ -1157,6 +1100,7 @@ html:has(.lightbox[open]) {
   background: var(--bg);
   color: var(--text);
   font-size: var(--ft-size, 96px);
+  letter-spacing: var(--ft-spacing, 0em);
   line-height: 1.2;
   field-sizing: content;
 }
@@ -1177,21 +1121,141 @@ html:has(.lightbox[open]) {
   color: var(--bg);
 }
 
+.font-tester__controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  gap: 24px clamp(24px, 4vw, 56px);
+  margin-top: clamp(24px, 4vw, 48px);
+  padding-top: clamp(20px, 3vw, 32px);
+  border-top: var(--dash);
+  font-size: var(--fs-small);
+}
+
+.ft-control {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ft-control__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  color: var(--text-soft);
+}
+
+.ft-control__head output {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+/* סליידר: קו דק בעובי --stroke בצבע --line, ונקודה עגולה בצבע --text (לבן בריחוף) */
+.ft-control input[type="range"] {
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.ft-control input[type="range"]::-webkit-slider-runnable-track {
+  height: var(--stroke);
+  background: var(--line);
+}
+
+.ft-control input[type="range"]::-moz-range-track {
+  height: var(--stroke);
+  background: var(--line);
+}
+
+.ft-control input[type="range"]::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: calc((var(--stroke) - 16px) / 2);
+  border: 0;
+  border-radius: 50%;
+  background: var(--text);
+  -webkit-appearance: none;
+}
+
+.ft-control input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--text);
+}
+
+.ft-control input[type="range"]:hover::-webkit-slider-thumb {
+  background: var(--text-hover);
+}
+
+.ft-control input[type="range"]:hover::-moz-range-thumb {
+  background: var(--text-hover);
+}
+
+.ft-control input[type="range"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* מתג צבעים: שני כפתורי רדיו שנראים כמו מתג */
+.font-tester__switch {
+  display: flex;
+  border: var(--stroke) solid var(--line);
+}
+
+.font-tester__switch label {
+  position: relative;
+  flex: 1;
+}
+
+.font-tester__switch input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+}
+
+.font-tester__switch span {
+  display: block;
+  padding: 6px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.font-tester__switch label + label span {
+  border-inline-start: var(--stroke) solid var(--line);
+}
+
+.font-tester__switch input:checked + span {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.font-tester__switch input:focus-visible + span {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
 .font-tester__note {
-  margin-top: 16px;
+  margin-top: 24px;
   color: var(--text-soft);
   font-size: var(--fs-small);
 }
 
 @media (max-width: 767px) {
-  /* במובייל הסליידר והמתג נערמים זה מעל זה */
+  /* במובייל הפקדים נערמים זה מעל זה */
   .font-tester__controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .font-tester__size input {
-    flex: 1;
+    grid-template-columns: 1fr;
   }
 }
 

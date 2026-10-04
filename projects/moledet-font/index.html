@@ -97,20 +97,26 @@
     <div class="container gallery">
       <!-- שדה התנסות בגופן מולדת (7.2) -->
       <section class="block font-tester" data-font-tester aria-label="שדה התנסות בגופן מולדת">
+        <p class="font-tester__hint">(נסו בעצמכם)</p>
+        <label class="visually-hidden" for="ft-text">טקסט לניסיון בגופן מולדת</label>
+        <textarea id="ft-text" class="font-tester__text display-font" rows="1" spellcheck="false" placeholder="תנסו לכתוב כאן..." data-ft-text></textarea>
         <div class="font-tester__controls">
-          <label class="font-tester__size">
-            <span>גודל</span>
-            <input type="range" min="32" max="200" value="96" step="1" data-ft-size>
-            <output data-ft-size-out>96px</output>
+          <label class="ft-control">
+            <span class="ft-control__head"><span>גודל</span><output data-ft-out="size">96px</output></span>
+            <input type="range" min="32" max="200" value="96" step="1" data-ft="size">
           </label>
-          <fieldset class="font-tester__theme">
-            <legend class="visually-hidden">צבעים</legend>
-            <label><input type="radio" name="ft-theme" value="light" checked> <span>בהיר על כהה</span></label>
-            <label><input type="radio" name="ft-theme" value="dark"> <span>כהה על בהיר</span></label>
+          <label class="ft-control">
+            <span class="ft-control__head"><span>מרווח</span><output data-ft-out="spacing">0.000em</output></span>
+            <input type="range" min="-0.05" max="0.3" value="0" step="0.005" data-ft="spacing">
+          </label>
+          <fieldset class="ft-control font-tester__theme">
+            <legend class="ft-control__head">צבעים</legend>
+            <div class="font-tester__switch">
+              <label><input type="radio" name="ft-theme" value="light" checked> <span>בהיר על כהה</span></label>
+              <label><input type="radio" name="ft-theme" value="dark"> <span>כהה על בהיר</span></label>
+            </div>
           </fieldset>
         </div>
-        <label class="visually-hidden" for="ft-text">טקסט לניסיון בגופן מולדת</label>
-        <textarea id="ft-text" class="font-tester__text display-font" rows="2" spellcheck="false" placeholder="תנסו לכתוב כאן..." data-ft-text></textarea>
         <p class="font-tester__note">הגופן כולל אותיות עבריות, ספרות וסימני פיסוק.</p>
       </section>
       <!-- הספסימן -->

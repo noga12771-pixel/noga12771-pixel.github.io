@@ -1,28 +1,33 @@
 // תיק העבודות של נוגה נחמן
 
 // ---------- שדה התנסות בגופן מולדת (7.2) ----------
-// סליידר גודל (32–200px, במובייל 24–96px) ומתג צבעים (בהיר על כהה / כהה על בהיר).
+// סליידרים לגודל (32–200px, במובייל 24–96px) ולמרווח בין האותיות, ומתג צבעים
+// (בהיר על כהה / כהה על בהיר). הערך של כל סליידר מוצג מעליו.
 (function fontTester() {
   const tester = document.querySelector("[data-font-tester]");
   if (!tester) return;
-  const range = tester.querySelector("[data-ft-size]");
-  const out = tester.querySelector("[data-ft-size-out]");
+  const size = tester.querySelector('[data-ft="size"]');
+  const spacing = tester.querySelector('[data-ft="spacing"]');
+  const out = (name) => tester.querySelector(`[data-ft-out="${name}"]`);
   const mobile = window.matchMedia("(max-width: 767px)");
 
   function apply() {
-    tester.style.setProperty("--ft-size", `${range.value}px`);
-    out.textContent = `${range.value}px`;
+    tester.style.setProperty("--ft-size", `${size.value}px`);
+    tester.style.setProperty("--ft-spacing", `${spacing.value}em`);
+    out("size").textContent = `${size.value}px`;
+    out("spacing").textContent = `${Number(spacing.value).toFixed(3)}em`;
   }
 
   function setRange() {
     const [min, max] = mobile.matches ? [24, 96] : [32, 200];
-    range.min = min;
-    range.max = max;
-    range.value = Math.min(max, Math.max(min, Number(range.value)));
+    size.min = min;
+    size.max = max;
+    size.value = Math.min(max, Math.max(min, Number(size.value)));
     apply();
   }
 
-  range.addEventListener("input", apply);
+  size.addEventListener("input", apply);
+  spacing.addEventListener("input", apply);
   mobile.addEventListener("change", setRange);
   setRange();
 
