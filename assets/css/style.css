@@ -1077,7 +1077,7 @@ html:has(.lightbox[open]) {
 }
 
 /* ---------- שדה התנסות בגופן מולדת (7.2) ----------
-   למעלה "(נסו בעצמכם)", מתחת הטקסט הגדול, ומתחתיו, אחרי קו מקווקו, שורת פקדים:
+   למעלה שורה קטנה על מה שהגופן כולל, מתחת הטקסט הגדול, ומתחתיו, אחרי קו מקווקו, שורת פקדים:
    גודל, גובה שורה, מרווח ומתג צבעים. כל פקד: שם וערך בשורה אחת, ומתחתיהם הסליידר */
 .font-tester {
   border: var(--dash);
@@ -1245,12 +1245,6 @@ html:has(.lightbox[open]) {
 .font-tester__switch input:focus-visible + span {
   outline: 2px solid var(--text);
   outline-offset: 2px;
-}
-
-.font-tester__note {
-  margin-top: 24px;
-  color: var(--text-soft);
-  font-size: var(--fs-small);
 }
 
 /* במסכים בינוניים: שני פקדים בשורה, כדי שהמתג לא יידחס */
