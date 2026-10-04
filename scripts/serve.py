@@ -31,6 +31,20 @@ class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
 
+    # כתובת שלא קיימת מציגה את 404.html, כמו ב-GitHub Pages
+    def send_error(self, code, message=None, explain=None):
+        page = ROOT / "404.html"
+        if code == 404 and page.exists():
+            body = page.read_bytes()
+            self.send_response(404)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            if self.command != "HEAD":
+                self.wfile.write(body)
+            return
+        super().send_error(code, message, explain)
+
 
 class Server(http.server.ThreadingHTTPServer):
     # מאזין גם ל-IPv4 וגם ל-IPv6 (כמו python -m http.server), כך שאם כבר רץ שרת
