@@ -1,20 +1,23 @@
 // תיק העבודות של נוגה נחמן
 
 // ---------- שדה התנסות בגופן מולדת (7.2) ----------
-// סליידרים לגודל (32–200px, במובייל 24–96px) ולמרווח בין האותיות, ומתג צבעים
+// סליידרים לגודל (32–200px, במובייל 24–96px), לגובה השורה ולמרווח בין האותיות, ומתג צבעים
 // (בהיר על כהה / כהה על בהיר). הערך של כל סליידר מוצג מעליו.
 (function fontTester() {
   const tester = document.querySelector("[data-font-tester]");
   if (!tester) return;
   const size = tester.querySelector('[data-ft="size"]');
+  const leading = tester.querySelector('[data-ft="leading"]');
   const spacing = tester.querySelector('[data-ft="spacing"]');
   const out = (name) => tester.querySelector(`[data-ft-out="${name}"]`);
   const mobile = window.matchMedia("(max-width: 767px)");
 
   function apply() {
     tester.style.setProperty("--ft-size", `${size.value}px`);
+    tester.style.setProperty("--ft-leading", leading.value);
     tester.style.setProperty("--ft-spacing", `${spacing.value}em`);
     out("size").textContent = `${size.value}px`;
+    out("leading").textContent = Number(leading.value).toFixed(2);
     out("spacing").textContent = `${Number(spacing.value).toFixed(3)}em`;
   }
 
@@ -27,6 +30,7 @@
   }
 
   size.addEventListener("input", apply);
+  leading.addEventListener("input", apply);
   spacing.addEventListener("input", apply);
   mobile.addEventListener("change", setRange);
   setRange();

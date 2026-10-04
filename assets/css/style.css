@@ -1078,7 +1078,7 @@ html:has(.lightbox[open]) {
 
 /* ---------- שדה התנסות בגופן מולדת (7.2) ----------
    למעלה "(נסו בעצמכם)", מתחת הטקסט הגדול, ומתחתיו, אחרי קו מקווקו, שורת פקדים:
-   גודל, מרווח ומתג צבעים. כל פקד: שם וערך בשורה אחת, ומתחתיהם הסליידר */
+   גודל, גובה שורה, מרווח ומתג צבעים. כל פקד: שם וערך בשורה אחת, ומתחתיהם הסליידר */
 .font-tester {
   border: var(--dash);
   padding: clamp(20px, 3vw, 40px);
@@ -1101,7 +1101,7 @@ html:has(.lightbox[open]) {
   color: var(--text);
   font-size: var(--ft-size, 96px);
   letter-spacing: var(--ft-spacing, 0em);
-  line-height: 1.2;
+  line-height: var(--ft-leading, 1.2);
   field-sizing: content;
 }
 
@@ -1123,7 +1123,7 @@ html:has(.lightbox[open]) {
 
 .font-tester__controls {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: end;
   gap: 24px clamp(24px, 4vw, 56px);
   margin-top: clamp(24px, 4vw, 48px);
@@ -1156,7 +1156,8 @@ html:has(.lightbox[open]) {
   font-variant-numeric: tabular-nums;
 }
 
-/* סליידר: קו דק בעובי --stroke בצבע --line, ונקודה עגולה בצבע --text (לבן בריחוף) */
+/* סליידר: קו דק בעובי --stroke בצבע --line, וידית מרובעת עם פינות מעוגלות מעט
+   כמו בסרגל הניווט (--nav-radius), בצבע --text (לבנה בריחוף) */
 .ft-control input[type="range"] {
   width: 100%;
   height: 20px;
@@ -1177,20 +1178,20 @@ html:has(.lightbox[open]) {
 }
 
 .ft-control input[type="range"]::-webkit-slider-thumb {
-  width: 16px;
-  height: 16px;
-  margin-top: calc((var(--stroke) - 16px) / 2);
+  width: 18px;
+  height: 18px;
+  margin-top: calc((var(--stroke) - 18px) / 2);
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--nav-radius);
   background: var(--text);
   -webkit-appearance: none;
 }
 
 .ft-control input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--nav-radius);
   background: var(--text);
 }
 
@@ -1250,6 +1251,13 @@ html:has(.lightbox[open]) {
   margin-top: 24px;
   color: var(--text-soft);
   font-size: var(--fs-small);
+}
+
+/* במסכים בינוניים: שני פקדים בשורה, כדי שהמתג לא יידחס */
+@media (max-width: 1100px) {
+  .font-tester__controls {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 767px) {
