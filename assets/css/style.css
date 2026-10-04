@@ -436,8 +436,10 @@ ul {
   display: none;
 }
 
+/* השם המלא שקוף בזמן ההקלדה, אבל נשאר בדף: כך הוא שומר על הרוחב, וקוראי מסך קוראים אותו
+   (visibility: hidden היה מסתיר אותו גם מקוראי מסך) */
 .typing.is-typing .typing__ghost {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .typing.is-typing .typing__live {
