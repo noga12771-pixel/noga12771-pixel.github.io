@@ -1197,23 +1197,6 @@
         }
       ]
     },
-    "exhibition-2": {
-      "type": "image",
-      "sizes": [
-        {
-          "file": "assets/img/checkcheck/exhibition-2-1500.webp",
-          "width": 1500,
-          "height": 1826,
-          "kb": 128
-        },
-        {
-          "file": "assets/img/checkcheck/exhibition-2-1200.webp",
-          "width": 1200,
-          "height": 1461,
-          "kb": 87
-        }
-      ]
-    },
     "promo-film": {
       "type": "film",
       "file": "assets/video/checkcheck/promo-film.mp4",
