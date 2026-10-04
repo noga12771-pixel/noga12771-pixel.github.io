@@ -95,18 +95,21 @@
     </div>
 
     <div class="container gallery">
-      <!-- הצעה לאישור: חזית וגב העטיפה (20260129_122021, 20260129_122047) -->
-      <div class="block block--pair block--fit" style="--ratios: 1.500">
-        <img style="--ratio: 0.750" src="../../assets/img/aya-korem-vinyl/cover-front-1200.webp"
-             srcset="../../assets/img/aya-korem-vinyl/cover-front-1200.webp 1200w, ../../assets/img/aya-korem-vinyl/cover-front-2400.webp 2400w"
+      <!-- זה לצד זה: סרטון התקליט (vinylmotion-web), מסובב לאורך ב-CSS, ותמונה מההגשה (מההגשה) -->
+      <div class="block block--pair block--fit" style="--ratios: 1.3125">
+        <div class="rotated-video" style="--ratio: 0.5625">
+          <video data-inview muted loop playsinline preload="none"
+                 poster="../../assets/img/aya-korem-vinyl/vinyl-motion-poster-1280.webp"
+                 width="1280" height="720"
+                 aria-label="סרטון: התקליט מסתובב על הפטיפון">
+            <source src="../../assets/video/aya-korem-vinyl/vinyl-motion.mp4" type="video/mp4">
+          </video>
+        </div>
+        <img style="--ratio: 0.75" src="../../assets/img/aya-korem-vinyl/presentation-1200.webp"
+             srcset="../../assets/img/aya-korem-vinyl/presentation-1200.webp 1200w, ../../assets/img/aya-korem-vinyl/presentation-1536.webp 1536w"
              sizes="(max-width: 767px) 100vw, 50vw"
              width="1200" height="1600" loading="lazy"
-             alt="חזית העטיפה: מבט ממושב הנהג אל המראה, עם שם האלבום">
-        <img style="--ratio: 0.750" src="../../assets/img/aya-korem-vinyl/cover-back-1200.webp"
-             srcset="../../assets/img/aya-korem-vinyl/cover-back-1200.webp 1200w, ../../assets/img/aya-korem-vinyl/cover-back-2400.webp 2400w"
-             sizes="(max-width: 767px) 100vw, 50vw"
-             width="1200" height="1600" loading="lazy"
-             alt="גב העטיפה: רשימת השירים על שלטי דרכים, ומכונית ירוקה">
+             alt="מההגשה: המעצבת מציגה את העבודה, ולידה מסך עם דיוקן מאויר">
       </div>
       <!-- הפריסה המלאה של העטיפה (פריסה של עטיפת תקליט) -->
       <figure class="block block--full">
@@ -123,15 +126,6 @@
              sizes="(max-width: 1408px) calc(100vw - 2 * clamp(20px, 5vw, 64px)), 1280px"
              width="1200" height="900" loading="lazy"
              alt="הדמיית חוברת השירים, פתוחה, לצד הכריכה עם המפה">
-      </figure>
-      <!-- סרטון התקליט (vinylmotion-web) -->
-      <figure class="block block--video">
-        <video data-inview muted loop playsinline preload="none"
-               poster="../../assets/img/aya-korem-vinyl/vinyl-motion-poster-1280.webp"
-               width="1280" height="720"
-               aria-label="סרטון: התקליט מסתובב על הפטיפון">
-          <source src="../../assets/video/aya-korem-vinyl/vinyl-motion.mp4" type="video/mp4">
-        </video>
       </figure>
     </div>
 

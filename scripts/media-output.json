@@ -1094,6 +1094,23 @@
           "kb": 29
         }
       ]
+    },
+    "presentation": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/presentation-1536.webp",
+          "width": 1536,
+          "height": 2048,
+          "kb": 113
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/presentation-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 76
+        }
+      ]
     }
   },
   "checkcheck": {

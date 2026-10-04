@@ -786,6 +786,33 @@ ul {
   min-width: 0;
 }
 
+/* ---------- סרטון מסובב לאורך ----------
+   סרטון שצולם לרוחב ומוצג לאורך: התיבה ביחס 9:16, והסרטון בתוכה מסובב ב-90 מעלות
+   עם כיוון השעון. הרוחב של הסרטון שווה לגובה התיבה, כך שהוא ממלא אותה בדיוק. */
+.rotated-video {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+}
+
+.block .rotated-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% * 16 / 9);
+  max-width: none;
+  height: auto;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+@media (max-width: 767px) {
+  .block--fit > .rotated-video {
+    width: min(100%, calc(var(--screen-max) * 9 / 16));
+    max-height: none;
+    margin-inline: auto;
+  }
+}
+
 /* ---------- scan-grid: מקבץ כפולות סרוקות (דו-חיים) ----------
    5 בשורה, כולן באותו גודל (תיבה 4:3), בלי חיתוך. במובייל 2 בשורה. */
 .block--scan-grid {
