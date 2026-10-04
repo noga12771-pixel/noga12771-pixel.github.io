@@ -144,7 +144,7 @@ document.querySelectorAll("[data-swap]").forEach((button) => {
 })();
 
 // ---------- "בחזרה למעלה" ----------
-// קישורים ל-#top (הסמל ב-header בעמוד הבית, החץ "בחזרה למעלה" בפינה בעמודי הפרויקטים)
+// קישורים ל-#top (הסמל ב-header בעמוד הבית, החץ "בחזרה למעלה" בפינה)
 // גוללים לראש העמוד: גלילה חלקה, ועם prefers-reduced-motion קפיצה מיידית.
 // בלי JavaScript, הקישור עדיין עובד כעוגן רגיל.
 document.addEventListener("click", (e) => {
