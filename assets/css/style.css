@@ -841,7 +841,33 @@ ul {
   outline-offset: 4px;
 }
 
-/* ---------- lightbox: כפולה בגדול ----------
+/* תמונה שלחיצה עליה פותחת אותה בגדול (lightbox), למשל הספסימן של גופן מולדת */
+.zoom-link {
+  display: block;
+}
+
+.zoom-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.zoom-link:focus-visible {
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .block--fit > .zoom-link {
+    max-height: none;
+  }
+
+  .block--fit > .zoom-link img {
+    max-height: var(--screen-max);
+    object-fit: contain;
+  }
+}
+
+/* ---------- lightbox: תמונה בגדול (כפולות בדו-חיים, הספסימן בגופן מולדת) ----------
    חלון על כל המסך, על רקע כהה. התמונה גדולה ככל האפשר בלי חיתוך,
    מעליה "סגירה" ומתחתיה מעבר לקודמת ולבאה. */
 .lightbox {
