@@ -575,14 +575,16 @@ ul {
   height: auto;
 }
 
-/* מדיה ראשית מוקטנת: 60% מרוחב התוכן, ממורכזת (במובייל ברוחב מלא) */
-.project__hero--small {
+/* מדיה מוקטנת (ראשית או בלוק בגלריה): 60% מרוחב התוכן, ממורכזת (במובייל ברוחב מלא) */
+.project__hero--small,
+.block--small {
   width: 60%;
   margin-inline: auto;
 }
 
 @media (max-width: 767px) {
-  .project__hero--small {
+  .project__hero--small,
+  .block--small {
     width: 100%;
   }
 }
