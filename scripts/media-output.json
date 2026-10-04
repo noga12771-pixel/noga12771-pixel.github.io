@@ -663,23 +663,6 @@
         }
       ]
     },
-    "book-photo-2": {
-      "type": "image",
-      "sizes": [
-        {
-          "file": "assets/img/du-hayim/book-photo-2-2400.webp",
-          "width": 2400,
-          "height": 1802,
-          "kb": 79
-        },
-        {
-          "file": "assets/img/du-hayim/book-photo-2-1200.webp",
-          "width": 1200,
-          "height": 901,
-          "kb": 24
-        }
-      ]
-    },
     "detail-cat": {
       "type": "image",
       "sizes": [
