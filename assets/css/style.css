@@ -950,14 +950,14 @@ html:has(.lightbox[open]) {
 }
 
 /* ---------- genre-grid: בנק הדימויים לפי ז'אנר ----------
-   עמודה לכל ז'אנר. האיורים נצבעים ב-CSS: קובץ ה-SVG משמש כמסכה (mask),
-   והצבע הוא --text. כל האיורים באותו גודל, בתיבה ריבועית. */
+   עמודה לכל ז'אנר, ובכל עמודה דימוי אחד בכל פעם, עם חצים מימין ומשמאל למעבר
+   בין הדימויים של אותו ז'אנר (main.js). האיורים נצבעים ב-CSS: קובץ ה-SVG משמש
+   כמסכה (mask), והצבע הוא --text. כל האיורים באותו גודל, בתיבה ריבועית.
+   בלי JavaScript כל האיורים מוצגים זה מתחת לזה. */
 .genre-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: clamp(20px, 3vw, 48px);
-  --mx: 0;
-  --my: 0;
 }
 
 .genre-grid__genre {
@@ -976,18 +976,9 @@ html:has(.lightbox[open]) {
 }
 
 .genre-grid__item {
-  --d: 4px;
   display: flex;
   justify-content: center;
-  /* תנועה קלה לפי העכבר או הגלילה (main.js מעדכן את --mx ו---my בין -1 ל-1) */
-  transform: translate3d(calc(var(--mx) * var(--d)), calc(var(--my) * var(--d)), 0);
-  transition: transform 300ms ease-out;
 }
-
-.genre-grid__item[data-depth="2"] { --d: 6px; }
-.genre-grid__item[data-depth="3"] { --d: 9px; }
-.genre-grid__item[data-depth="4"] { --d: 12px; }
-.genre-grid__item[data-depth="5"] { --d: 15px; }
 
 .genre-grid__art {
   display: block;
@@ -998,23 +989,83 @@ html:has(.lightbox[open]) {
   mask: var(--src) center / contain no-repeat;
 }
 
-@media (max-width: 767px) {
-  /* במובייל: גלילה לרוחב, עמודה לכל ז'אנר (שתיים וחלק נראות, כדי שיהיה ברור שאפשר לגלול) */
-  .genre-grid {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 40%;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 12px;
-    margin-inline: calc(var(--gutter) * -1);
-    padding-inline: var(--gutter);
-    scroll-padding-inline: var(--gutter);
+/* קרוסלה: חץ, דימוי, חץ. החץ הימני ("לדימוי הקודם") מצביע ימינה, והשמאלי ("לדימוי הבא") שמאלה */
+.genre-grid__stage {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.genre-grid.is-carousel .genre-grid__list {
+  flex: 1;
+  min-width: 0;
+}
+
+.genre-grid.is-carousel .genre-grid__art {
+  width: 100%;
+  max-width: 170px;
+}
+
+.genre-grid__item[hidden] {
+  display: none;
+}
+
+/* החצים: כמו החץ של "לגלילה", קו בעובי --stroke בצבע --accent, וגדלים ב-10% בריחוף */
+.genre-grid__arrow {
+  flex: none;
+  display: grid;
+  place-items: center;
+  padding: 10px 6px;
+  border: 0;
+  background: none;
+  color: var(--accent);
+}
+
+.genre-grid__arrow svg {
+  transition: transform var(--hover-duration) ease;
+}
+
+.genre-grid__arrow:hover svg {
+  transform: scale(1.1);
+}
+
+.genre-grid__arrow:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genre-grid__arrow svg {
+    transition: none;
   }
 
-  .genre-grid__col {
-    scroll-snap-align: start;
+  .genre-grid__arrow:hover svg {
+    transform: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .genre-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: clamp(32px, 6vw, 56px);
+  }
+}
+
+@media (max-width: 767px) {
+  /* במובייל: שני ז'אנרים בשורה, והחצים עוברים מתחת לדימוי, כדי שהדימוי יהיה גדול יותר */
+  .genre-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .genre-grid__stage {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 16px;
+  }
+
+  .genre-grid.is-carousel .genre-grid__list {
+    flex-basis: 100%;
+    order: -1;
   }
 }
 

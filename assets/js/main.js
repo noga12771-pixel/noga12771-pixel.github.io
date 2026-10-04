@@ -214,47 +214,47 @@ document.addEventListener("click", (e) => {
   }
 })();
 
-// ---------- תנועה קלה של איורים (genre-grid) ----------
-// בדסקטופ האיורים זזים מעט לפי מיקום העכבר, ובמובייל לפי הגלילה.
-// כל איור זז בעוצמה אחרת (data-depth ב-HTML), וה-CSS מתרגם את --mx ו---my לתזוזה.
-// רק כשהבלוק במסך. עם prefers-reduced-motion אין תנועה.
-(function parallax() {
-  const blocks = document.querySelectorAll("[data-parallax]");
-  if (!blocks.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  const visible = new Set();
-  let frame = null;
-  let pointer = { x: 0, y: 0 };
+// ---------- בנק הדימויים לפי ז'אנר (genre-grid) ----------
+// בכל ז'אנר מוצג דימוי אחד, עם חץ מימין (לדימוי הקודם) וחץ משמאל (לדימוי הבא).
+// אחרי הדימוי האחרון חוזרים לראשון. בלי JavaScript כל הדימויים מוצגים זה מתחת לזה.
+(function genreCarousel() {
+  const arrow = (points) =>
+    '<svg width="24" height="14" viewBox="0 0 24 14" aria-hidden="true" focusable="false">' +
+    `<path d="${points}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>`;
+  const RIGHT = arrow("M2 7h19M15 1l6 6-6 6");
+  const LEFT = arrow("M22 7H3M9 1L3 7l6 6");
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => (e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)));
-  });
-  blocks.forEach((b) => io.observe(b));
+  document.querySelectorAll("[data-genre-carousel]").forEach((grid) => {
+    grid.classList.add("is-carousel");
+    grid.querySelectorAll(".genre-grid__col").forEach((col) => {
+      const genre = col.querySelector(".genre-grid__genre").textContent.trim();
+      const list = col.querySelector(".genre-grid__list");
+      const items = [...list.children];
+      let index = 0;
 
-  function update() {
-    frame = null;
-    visible.forEach((block) => {
-      if (finePointer) {
-        block.style.setProperty("--mx", pointer.x.toFixed(3));
-        block.style.setProperty("--my", pointer.y.toFixed(3));
-      } else {
-        // -1 כשהבלוק בתחתית המסך, 1 כשהוא בראשו
-        const r = block.getBoundingClientRect();
-        const progress = 1 - (r.top + r.height / 2) / (window.innerHeight / 2);
-        block.style.setProperty("--my", Math.max(-1, Math.min(1, progress)).toFixed(3));
+      function show(i) {
+        index = (i + items.length) % items.length;
+        items.forEach((item, k) => { item.hidden = k !== index; });
       }
-    });
-  }
-  const request = () => { if (!frame) frame = requestAnimationFrame(update); };
 
-  if (finePointer) {
-    window.addEventListener("pointermove", (e) => {
-      pointer = { x: (e.clientX / window.innerWidth - 0.5) * 2, y: (e.clientY / window.innerHeight - 0.5) * 2 };
-      request();
-    }, { passive: true });
-  } else {
-    window.addEventListener("scroll", request, { passive: true });
-  }
+      function button(label, svg, step) {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "genre-grid__arrow";
+        b.setAttribute("aria-label", `${label}, ${genre}`);
+        b.innerHTML = svg;
+        b.addEventListener("click", () => show(index + step));
+        return b;
+      }
+
+      const stage = document.createElement("div");
+      stage.className = "genre-grid__stage";
+      list.before(stage);
+      list.setAttribute("aria-live", "polite");
+      stage.append(button("לדימוי הקודם", RIGHT, -1), list, button("לדימוי הבא", LEFT, 1));
+      show(0);
+    });
+  });
 })();
 
 // ---------- אפקט הקלדה בשם ----------

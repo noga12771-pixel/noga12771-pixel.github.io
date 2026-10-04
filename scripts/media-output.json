@@ -226,6 +226,23 @@
           "kb": 127
         }
       ]
+    },
+    "show-photo-4": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/by-the-cover/show-photo-4-2400.webp",
+          "width": 2400,
+          "height": 3200,
+          "kb": 298
+        },
+        {
+          "file": "assets/img/by-the-cover/show-photo-4-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "kb": 91
+        }
+      ]
     }
   },
   "haifa-kids-festival": {
