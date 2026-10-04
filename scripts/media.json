@@ -326,6 +326,10 @@
       "name": "specimen"
     },
     {
+      "src": "Big Frame Poster Mockup copy.jpg",
+      "name": "specimen-mockup"
+    },
+    {
       "src": "moledet-motion-web.mp4",
       "name": "motion",
       "poster_at": 40.0

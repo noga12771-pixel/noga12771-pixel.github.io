@@ -1298,6 +1298,23 @@
           "kb": 3
         }
       ]
+    },
+    "specimen-mockup": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/moledet-font/specimen-mockup-2400.webp",
+          "width": 2400,
+          "height": 3300,
+          "kb": 452
+        },
+        {
+          "file": "assets/img/moledet-font/specimen-mockup-1200.webp",
+          "width": 1200,
+          "height": 1650,
+          "kb": 111
+        }
+      ]
     }
   }
 }
