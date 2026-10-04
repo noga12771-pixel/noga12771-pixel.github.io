@@ -665,6 +665,12 @@ ul {
   color: var(--text);
 }
 
+/* קישור בקולופון (למשל לתיק העבודות של שותפה): קו תחתון דק, כמו בקישורי ה-footer */
+.colophon dd a {
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
 /* כפתור לממשק חיצוני (7.1) */
 .button {
   display: inline-block;
