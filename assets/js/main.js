@@ -149,6 +149,26 @@ document.querySelectorAll("[data-swap]").forEach((button) => {
   });
 })();
 
+// ---------- "יצירת קשר" מסומן כשה-footer במסך ----------
+// כל עוד ה-footer (#contact) נראה במסך, המשבצת "יצירת קשר" בסרגל צבועה בצהוב,
+// והמשבצת של העמוד הנוכחי (למשל "עבודות") חוזרת להיות רגילה. כשגוללים למעלה, הכל חוזר.
+(function contactHighlight() {
+  const footer = document.getElementById("contact");
+  const contact = document.querySelector('.site-nav a[href$="#contact"]');
+  if (!footer || !contact) return;
+  const current = document.querySelector(".site-nav a[aria-current]");
+  function update() {
+    // בעמוד קצר שלא נגלל (כמו 404) ה-footer תמיד במסך, ולכן שם לא מסמנים
+    const scrollable = document.documentElement.scrollHeight > window.innerHeight + 1;
+    const inView = scrollable && footer.getBoundingClientRect().top < window.innerHeight;
+    contact.classList.toggle("is-active", inView);
+    if (current && current !== contact) current.classList.toggle("is-inactive", inView);
+  }
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+})();
+
 // ---------- כפתור "בחזרה למעלה" ----------
 // החץ בפינה התחתונה מופיע אחרי שמתחילים לגלול, ונעלם כשחוזרים לראש העמוד.
 (function toTopButton() {

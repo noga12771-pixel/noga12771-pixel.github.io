@@ -324,9 +324,16 @@ ul {
 }
 
 .site-nav a:hover,
-.site-nav a[aria-current] {
+.site-nav a[aria-current],
+.site-nav a.is-active {
   background: var(--accent);
   color: var(--bg);
+}
+
+/* כשה-footer במסך, "יצירת קשר" מסומן (is-active), והקישור של העמוד מפסיק להיות מסומן (main.js) */
+.site-nav a[aria-current].is-inactive:not(:hover) {
+  background: none;
+  color: var(--text);
 }
 
 .site-nav a:focus-visible {
