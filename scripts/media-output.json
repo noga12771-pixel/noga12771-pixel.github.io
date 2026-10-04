@@ -556,28 +556,6 @@
         }
       ]
     },
-    "page-flip": {
-      "type": "video",
-      "file": "assets/video/du-hayim/page-flip.mp4",
-      "mb": 4.69,
-      "duration": 9.4,
-      "width": 1280,
-      "height": 720,
-      "poster": [
-        {
-          "file": "assets/img/du-hayim/page-flip-poster-1280.webp",
-          "width": 1280,
-          "height": 720,
-          "kb": 47
-        },
-        {
-          "file": "assets/img/du-hayim/page-flip-poster-1200.webp",
-          "width": 1200,
-          "height": 675,
-          "kb": 42
-        }
-      ]
-    },
     "spread-characters": {
       "type": "image",
       "sizes": [
