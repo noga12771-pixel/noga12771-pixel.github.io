@@ -1213,6 +1213,28 @@
           "kb": 87
         }
       ]
+    },
+    "promo-film": {
+      "type": "film",
+      "file": "assets/video/checkcheck/promo-film.mp4",
+      "mb": 17.24,
+      "duration": 109.3,
+      "width": 1280,
+      "height": 720,
+      "poster": [
+        {
+          "file": "assets/img/checkcheck/promo-film-poster-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "kb": 20
+        },
+        {
+          "file": "assets/img/checkcheck/promo-film-poster-1200.webp",
+          "width": 1200,
+          "height": 675,
+          "kb": 18
+        }
+      ]
     }
   },
   "moledet-font": {
