@@ -656,7 +656,7 @@ Adobe Creative Suite, Figma, Procreate, Midjourney
 - [x] לכל התמונות יש `alt` בעברית (בדיקת axe בכל העמודים, בלי בעיות).
 - [ ] הסרטונים מתנגנים בלולאה, בלי קול, גם באייפון.
 - [ ] עם `prefers-reduced-motion` הסרטונים לא מתנגנים אוטומטית.
-- [ ] עמוד הבית נטען מהר (ציון Performance של 85 ומעלה ב-Lighthouse במובייל).
+- [x] עמוד הבית נטען מהר (ציון Performance של 85 ומעלה ב-Lighthouse במובייל). נבדק באתר החי: Performance 88, Accessibility 100, Best Practices 100, SEO 100.
 - [x] אין שגיאות בקונסול של הדפדפן.
 - [x] הגופן מולדת נטען, ויש fallback תקין (וגם נרקיס יאיר נטען באתר החי).
 - [x] תיקיית `raw/` לא עלתה ל-GitHub.
