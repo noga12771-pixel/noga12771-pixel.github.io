@@ -70,6 +70,8 @@ document.querySelectorAll("[data-swap]").forEach((button) => {
 // קישור עם data-lightbox (למשל כפולה במקבץ הסריקות) נפתח בגדול בחלון מעל העמוד,
 // עם מעבר לקודמת ולבאה באותו בלוק. סגירה: כפתור, Esc או לחיצה על הרקע.
 // מקלדת: חץ שמאלה לבאה וחץ ימינה לקודמת (כיוון הקריאה בעברית).
+// כפתורי המעבר: "אחורה" ו"קדימה". בלוק יכול לקבוע שמות אחרים
+// (data-lightbox-prev / data-lightbox-next).
 // בלי JavaScript, הקישור פותח את התמונה הגדולה בדפדפן.
 (function lightbox() {
   const links = [...document.querySelectorAll("a[data-lightbox]")];
@@ -82,14 +84,16 @@ document.querySelectorAll("[data-swap]").forEach((button) => {
     '<button class="lightbox__close" type="button">סגירה</button>' +
     '<div class="lightbox__stage"><img class="lightbox__img" alt=""></div>' +
     '<div class="lightbox__nav">' +
-    '<button class="lightbox__prev" type="button">הקודמת</button>' +
+    '<button class="lightbox__prev" type="button">אחורה</button>' +
     '<span class="lightbox__count" dir="ltr" aria-live="polite"></span>' +
-    '<button class="lightbox__next" type="button">הבאה</button>' +
+    '<button class="lightbox__next" type="button">קדימה</button>' +
     "</div>";
   document.body.append(dialog);
 
   const img = dialog.querySelector(".lightbox__img");
   const count = dialog.querySelector(".lightbox__count");
+  const prevButton = dialog.querySelector(".lightbox__prev");
+  const nextButton = dialog.querySelector(".lightbox__next");
   let group = [];
   let index = 0;
 
@@ -112,6 +116,9 @@ document.querySelectorAll("[data-swap]").forEach((button) => {
       if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
       e.preventDefault();
       group = links.filter((l) => l.parentElement === link.parentElement);
+      const block = link.parentElement;
+      prevButton.textContent = block.dataset.lightboxPrev || "אחורה";
+      nextButton.textContent = block.dataset.lightboxNext || "קדימה";
       show(group.indexOf(link));
       moveCursor(dialog);
       dialog.showModal();
@@ -127,8 +134,8 @@ document.querySelectorAll("[data-swap]").forEach((button) => {
 
   dialog.addEventListener("close", close);
   dialog.querySelector(".lightbox__close").addEventListener("click", close);
-  dialog.querySelector(".lightbox__prev").addEventListener("click", () => show(index - 1));
-  dialog.querySelector(".lightbox__next").addEventListener("click", () => show(index + 1));
+  prevButton.addEventListener("click", () => show(index - 1));
+  nextButton.addEventListener("click", () => show(index + 1));
   dialog.addEventListener("click", (e) => {
     if (e.target === dialog || e.target.classList.contains("lightbox__stage")) close();
   });
