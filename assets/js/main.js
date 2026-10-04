@@ -35,7 +35,7 @@
 // מחבר את שתי המילים האחרונות בכל כותרת ופסקה ברווח שלא נשבר (U+00A0),
 // כך שמילה אחרונה לא תישאר לבד בשורה. גיבוי ל-text-wrap שב-CSS, לדפדפנים שלא תומכים בו.
 (function noOrphans() {
-  const els = document.querySelectorAll("h1, h2, h3, p, li, dd, figcaption, .next-project__name");
+  const els = document.querySelectorAll("h1, h2, h3, p, li, dd, figcaption, .project-nav__name");
   els.forEach((el) => {
     if (el.closest("[data-typing], textarea, .site-nav, .site-footer")) return;
     if (el.textContent.trim().split(/\s+/).length < 3) return;
@@ -133,8 +133,18 @@ document.querySelectorAll("[data-swap]").forEach((button) => {
   });
 })();
 
+// ---------- כפתור "בחזרה למעלה" ----------
+// החץ בפינה התחתונה מופיע אחרי שמתחילים לגלול, ונעלם כשחוזרים לראש העמוד.
+(function toTopButton() {
+  const button = document.querySelector(".to-top");
+  if (!button) return;
+  const update = () => { button.hidden = window.scrollY < 200; };
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+})();
+
 // ---------- "בחזרה למעלה" ----------
-// קישורים ל-#top (הסמל ב-header בעמוד הבית, "בחזרה למעלה" בתחתית עמוד פרויקט)
+// קישורים ל-#top (הסמל ב-header בעמוד הבית, החץ "בחזרה למעלה" בפינה בעמודי הפרויקטים)
 // גוללים לראש העמוד: גלילה חלקה, ועם prefers-reduced-motion קפיצה מיידית.
 // בלי JavaScript, הקישור עדיין עובד כעוגן רגיל.
 document.addEventListener("click", (e) => {

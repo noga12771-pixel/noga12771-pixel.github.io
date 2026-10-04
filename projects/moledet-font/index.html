@@ -132,14 +132,23 @@
       </figure>
     </div>
 
-    <nav class="container next-project" aria-label="ניווט בין פרויקטים">
-      <a class="next-project__link" href="../by-the-cover/">
-        <span class="next-project__label">לפרויקט הבא</span>
-        <img class="next-project__thumb" src="../../assets/img/by-the-cover/opening-screen-poster-1200.webp" width="160" height="120" loading="lazy" alt="">
-        <span class="next-project__name">לפי הכריכה</span>
+    <nav class="container project-nav" aria-label="ניווט בין פרויקטים">
+      <a class="project-nav__link" href="../aya-korem-vinyl/" rel="prev">
+        <span class="project-nav__label">לפרויקט הקודם</span>
+        <span class="project-nav__name">לחסד וגאולה המשך ישר</span>
       </a>
-      <a class="next-project__back" href="#top">בחזרה למעלה</a>
+      <a class="project-nav__link project-nav__link--next" href="../by-the-cover/" rel="next">
+        <span class="project-nav__label">לפרויקט הבא</span>
+        <span class="project-nav__name">לפי הכריכה</span>
+      </a>
     </nav>
+
+    <!-- בחזרה למעלה: חץ קטן שנצמד לפינה התחתונה, ומופיע אחרי שמתחילים לגלול (main.js) -->
+    <a class="to-top" href="#top" aria-label="בחזרה למעלה" hidden>
+      <svg width="14" height="20" viewBox="0 0 14 20" aria-hidden="true" focusable="false">
+        <path d="M7 19V2M1 8l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+      </svg>
+    </a>
   </main>
 
   <footer id="contact" class="site-footer">
