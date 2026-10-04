@@ -101,24 +101,21 @@
     </div>
 
     <div class="container gallery">
-      <!-- הדמיית ממשק התוסף (chikcheck2-motion-web) -->
-      <figure class="block block--video block--tall">
-        <video data-inview muted loop playsinline preload="none"
+      <!-- זה לצד זה: הדמיית ממשק התוסף (chikcheck2-motion-web, מימין) ודף הנחיתה (chikcheck1-motion-web, משמאל) -->
+      <div class="block block--pair block--fit" style="--ratios: 1.6">
+        <video style="--ratio: 0.8" data-inview muted loop playsinline preload="none"
                poster="../../assets/img/checkcheck/extension-demo-poster-864.webp"
                width="864" height="1080"
                aria-label="סרטון: הדמיית ממשק התוסף צ&#x27;קצ&#x27;ק על מחשב נייד">
           <source src="../../assets/video/checkcheck/extension-demo.mp4" type="video/mp4">
         </video>
-      </figure>
-      <!-- הצעה לאישור: דף הנחיתה, כסרטון (chikcheck1-motion-web) -->
-      <figure class="block block--video block--tall">
-        <video data-inview muted loop playsinline preload="none"
+        <video style="--ratio: 0.8" data-inview muted loop playsinline preload="none"
                poster="../../assets/img/checkcheck/landing-page-poster-864.webp"
                width="864" height="1080"
                aria-label="סרטון: גלילה בדף הנחיתה של צ&#x27;קצ&#x27;ק">
           <source src="../../assets/video/checkcheck/landing-page.mp4" type="video/mp4">
         </video>
-      </figure>
+      </div>
       <!-- placeholder (film): סרטון התדמית -->
       <figure class="block block--film">
         <div class="placeholder block__placeholder">סרטון התדמית (נגן עם קול)<br>(ממתין לקובץ בגרסה של 1280px)</div>
