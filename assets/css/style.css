@@ -426,10 +426,12 @@ ul {
   display: inline-block;
 }
 
+/* הטקסט המוקלד ממורכז בתוך המקום של השם, כך שכל מילה (וגם השם) מופיעה באמצע המסך */
 .typing__live {
   position: absolute;
   inset-block: 0;
-  inset-inline-start: 0;
+  inset-inline: 0;
+  text-align: center;
   white-space: nowrap;
   display: none;
 }
