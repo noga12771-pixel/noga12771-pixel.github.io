@@ -61,7 +61,7 @@
   --stroke: 2px; /* עובי כל הקווים: סרגל הניווט, החץ של "לגלילה" והקו המקווקו */
 
   /* תנועה */
-  --zoom-duration: 450ms;
+  --overlay-duration: 300ms;
   --swap-duration: 350ms;
   --hover-duration: 150ms;
 }
@@ -533,15 +533,43 @@ ul {
 .card__media video {
   object-fit: cover;
   object-position: center;
-  transition: transform var(--zoom-duration) ease;
 }
 
-/* בריחוף התמונה (או הסרטון) מתקרבת ב-10% בתוך המסגרת. המסגרת לא משתנה (overflow: hidden) */
+/* בריחוף (ובפוקוס מקלדת) המסך מתכהה מעט, ומעליו התחומים והשנה של הפרויקט, ממורכזים.
+   רק במכשירים עם עכבר; במגע הכרטיס נשאר נקי */
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 24px;
+  background: rgb(13 13 13 / 0.6);
+  color: var(--text-hover);
+  text-align: center;
+  opacity: 0;
+  transition: opacity var(--overlay-duration) ease;
+}
+
+.card__fields {
+  font-size: var(--fs-card-title);
+  font-variation-settings: var(--text-axes-medium);
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.card__year {
+  font-size: var(--fs-small);
+}
+
 @media (hover: hover) and (pointer: fine) {
-  .card:hover .card__media img,
-  .card:hover .card__media video {
-    transform: scale(1.1);
+  .card:hover .card__info {
+    opacity: 1;
   }
+}
+
+.card:focus-visible .card__info {
+  opacity: 1;
 }
 
 /* שם ארוך נשבר לשתי שורות לכל היותר, בשבירה מאוזנת */
@@ -1657,11 +1685,7 @@ html:has(.lightbox[open]) {
     transition: none;
   }
 
-  .card__media img,
-  .card__media video,
-  .card:hover .card__media img,
-  .card:hover .card__media video {
-    transform: none;
+  .card__info {
     transition: none;
   }
 
