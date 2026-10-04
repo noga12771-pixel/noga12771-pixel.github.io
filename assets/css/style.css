@@ -1325,10 +1325,10 @@ html:has(.lightbox[open]) {
 }
 
 /* ---------- עמוד אודות (5.4) ----------
-   מימין הטקסט (עד 680px), משמאל הדיוקן המאויר בגדול. במובייל הדיוקן עולה מעל הטקסט, קטן יותר */
+   מימין הטקסט (עד 680px), משמאל צילום של נוגה (עד 520px). במובייל הצילום עולה מעל הטקסט, ברוחב מלא */
 .about {
   display: grid;
-  grid-template-columns: minmax(0, var(--text-width)) minmax(240px, 420px);
+  grid-template-columns: minmax(0, var(--text-width)) minmax(240px, min(520px, 40%));
   justify-content: space-between;
   align-items: start;
   gap: clamp(40px, 6vw, 96px);
@@ -1399,8 +1399,6 @@ html:has(.lightbox[open]) {
   .about__portrait {
     position: static;
     order: -1;
-    width: min(60%, 260px);
-    margin-inline: auto;
   }
 }
 
