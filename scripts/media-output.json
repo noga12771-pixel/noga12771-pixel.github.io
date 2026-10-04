@@ -1277,23 +1277,6 @@
         }
       ]
     },
-    "pe-3d": {
-      "type": "image",
-      "sizes": [
-        {
-          "file": "assets/img/moledet-font/pe-3d-2400.webp",
-          "width": 2400,
-          "height": 3200,
-          "kb": 46
-        },
-        {
-          "file": "assets/img/moledet-font/pe-3d-1200.webp",
-          "width": 1200,
-          "height": 1600,
-          "kb": 13
-        }
-      ]
-    },
     "motion": {
       "type": "video",
       "file": "assets/video/moledet-font/motion.mp4",
