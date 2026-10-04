@@ -1110,6 +1110,20 @@ html:has(.lightbox[open]) {
 .font-tester {
   border: var(--dash);
   padding: clamp(20px, 3vw, 40px);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* "כהה על בהיר": כל הבלוק מתהפך, כולל הסליידרים, הקווים והמתג.
+   הצבעים מוגדרים מחדש רק בתוך הבלוק, וכל השאר נגזר מהם.
+   --text-soft ו---line כהים יותר מבשאר האתר, כדי לשמור על ניגודיות על הרקע הבהיר */
+.font-tester[data-theme="dark"] {
+  --bg: #D6D6D6;
+  --text: #0D0D0D;
+  --text-soft: #4A4A4A;
+  --text-hover: #000000;
+  --line: #6E6E6E;
+  --dash: var(--stroke) dashed var(--line);
 }
 
 .font-tester__hint {
@@ -1142,11 +1156,6 @@ html:has(.lightbox[open]) {
 .font-tester__text:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
-}
-
-.font-tester[data-theme="dark"] .font-tester__text {
-  background: var(--text);
-  color: var(--bg);
 }
 
 .font-tester__controls {
@@ -1267,7 +1276,7 @@ html:has(.lightbox[open]) {
 
 .font-tester__switch input:checked + span {
   background: var(--accent);
-  color: var(--bg);
+  color: #0D0D0D; /* טקסט כהה על המילוי הצהוב, בשני המצבים */
 }
 
 .font-tester__switch input:focus-visible + span {
