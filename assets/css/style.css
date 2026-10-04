@@ -1076,6 +1076,34 @@ html:has(.lightbox[open]) {
   background: var(--surface);
 }
 
+/* ---------- מערך התווים (גופן מולדת) ----------
+   השם "מולדת" גדול מאוד, ומתחתיו האלף-בית ושורת ספרות וסימני פיסוק, כולם בגופן מולדת */
+.glyphs {
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.glyphs__name {
+  margin-bottom: clamp(40px, 8vw, 140px);
+  font-size: clamp(80px, 16vw, 240px);
+  line-height: 0.9;
+}
+
+.glyphs__row {
+  font-size: clamp(28px, 4.6vw, 64px);
+  overflow-wrap: anywhere;
+  text-wrap: wrap;
+}
+
+.glyphs__row + .glyphs__row {
+  margin-top: clamp(20px, 4vw, 56px);
+}
+
+.glyphs__row--marks {
+  font-size: clamp(24px, 3.6vw, 50px);
+  word-spacing: 0.2em;
+}
+
 /* ---------- שדה התנסות בגופן מולדת (7.2) ----------
    למעלה שורה קטנה על מה שהגופן כולל, מתחת הטקסט הגדול, ומתחתיו, אחרי קו מקווקו, שורת פקדים:
    גודל, גובה שורה, מרווח ומתג צבעים. כל פקד: שם וערך בשורה אחת, ומתחתיהם הסליידר */

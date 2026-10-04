@@ -46,7 +46,7 @@
 (function noOrphans() {
   const els = document.querySelectorAll("h1, h2, h3, p, li, dd, figcaption, .project-nav__name");
   els.forEach((el) => {
-    if (el.closest("[data-typing], textarea, .site-nav, .site-footer")) return;
+    if (el.closest("[data-typing], textarea, .site-nav, .site-footer, .glyphs")) return;
     if (el.textContent.trim().split(/\s+/).length < 3) return;
     // הרווח האחרון נמצא בצומת הטקסט האחרון שיש בו רווח
     const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
