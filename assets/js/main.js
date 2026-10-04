@@ -278,28 +278,51 @@ document.addEventListener("click", (e) => {
 })();
 
 // ---------- אפקט הקלדה בשם ----------
-// השם נכתב אות אחר אות, עם סמן מהבהב. מתחיל אחרי שהגופנים נטענו, כדי שהרוחב לא יקפוץ.
+// קודם מוקלדות ונמחקות המילים מ-data-typing-words (עיצוב, איור, מיתוג), אחת אחרי השנייה,
+// ובסוף מוקלד השם ונשאר, עם סמן מהבהב. מתחיל אחרי שהגופנים נטענו, כדי שהרוחב לא יקפוץ.
+// השם המלא שמור בדף מההתחלה (typing__ghost), כך שהשורה לא זזה וקוראי מסך קוראים רק אותו.
 // עם prefers-reduced-motion השם מוצג מיד בשלמותו, בלי הקלדה.
 (function typingName() {
   const el = document.querySelector("[data-typing]");
   if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  const full = el.querySelector(".typing__ghost").textContent.trim();
+  const name = el.querySelector(".typing__ghost").textContent.trim();
+  const words = (el.dataset.typingWords || "").split(",").map((w) => w.trim()).filter(Boolean);
   const out = el.querySelector(".typing__text");
-  const START_DELAY = 400; // מילישניות לפני האות הראשונה
-  const LETTER_DELAY = 140; // מילישניות בין אותיות
+  const START_DELAY = 400; // לפני האות הראשונה
+  const TYPE_DELAY = 140; // בין אותיות בהקלדה
+  const ERASE_DELAY = 60; // בין אותיות במחיקה
+  const HOLD = 700; // כמה זמן מילה נשארת לפני שהיא נמחקת
+  const GAP = 250; // הפסקה אחרי מחיקה, לפני המילה הבאה
 
-  el.classList.add("is-typing");
-  const letters = Array.from(full);
-  let i = 0;
+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-  function typeNext() {
-    out.textContent = letters.slice(0, ++i).join("");
-    if (i < letters.length) setTimeout(typeNext, LETTER_DELAY);
+  async function type(text) {
+    const letters = Array.from(text);
+    for (let i = 1; i <= letters.length; i++) {
+      out.textContent = letters.slice(0, i).join("");
+      await wait(TYPE_DELAY);
+    }
   }
 
-  (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
-    setTimeout(typeNext, START_DELAY);
+  async function erase() {
+    const letters = Array.from(out.textContent);
+    for (let i = letters.length - 1; i >= 0; i--) {
+      out.textContent = letters.slice(0, i).join("");
+      await wait(ERASE_DELAY);
+    }
+  }
+
+  el.classList.add("is-typing");
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(async () => {
+    await wait(START_DELAY);
+    for (const word of words) {
+      await type(word);
+      await wait(HOLD);
+      await erase();
+      await wait(GAP);
+    }
+    await type(name);
   });
 })();
 

@@ -459,12 +459,6 @@ ul {
   }
 }
 
-.intro__tagline {
-  margin-top: clamp(12px, 2vw, 24px);
-  font-size: clamp(18px, 2vw, 26px);
-  line-height: 1.5;
-}
-
 /* "לגלילה": חץ SVG בקו דק בצבע accent, ומתחתיו מילה, בתחתית מסך הפתיחה */
 .scroll-cue {
   position: absolute;
