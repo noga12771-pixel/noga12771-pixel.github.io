@@ -1111,6 +1111,40 @@
           "kb": 76
         }
       ]
+    },
+    "record-sleeve-b": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/record-sleeve-b-2400.webp",
+          "width": 2400,
+          "height": 1800,
+          "kb": 216
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/record-sleeve-b-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "kb": 44
+        }
+      ]
+    },
+    "label-mockup": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/aya-korem-vinyl/label-mockup-2400.webp",
+          "width": 2400,
+          "height": 1800,
+          "kb": 109
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/label-mockup-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "kb": 28
+        }
+      ]
     }
   },
   "checkcheck": {
