@@ -1235,6 +1235,23 @@
           "kb": 18
         }
       ]
+    },
+    "exhibition-3": {
+      "type": "image",
+      "sizes": [
+        {
+          "file": "assets/img/checkcheck/exhibition-3-2400.webp",
+          "width": 2400,
+          "height": 2876,
+          "kb": 324
+        },
+        {
+          "file": "assets/img/checkcheck/exhibition-3-1200.webp",
+          "width": 1200,
+          "height": 1438,
+          "kb": 106
+        }
+      ]
     }
   },
   "moledet-font": {
