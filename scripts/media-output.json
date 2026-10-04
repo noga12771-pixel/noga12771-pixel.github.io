@@ -1027,57 +1027,6 @@
         }
       ]
     },
-    "cover-front": {
-      "type": "image",
-      "sizes": [
-        {
-          "file": "assets/img/aya-korem-vinyl/cover-front-2400.webp",
-          "width": 2400,
-          "height": 3200,
-          "kb": 524
-        },
-        {
-          "file": "assets/img/aya-korem-vinyl/cover-front-1200.webp",
-          "width": 1200,
-          "height": 1600,
-          "kb": 173
-        }
-      ]
-    },
-    "cover-back": {
-      "type": "image",
-      "sizes": [
-        {
-          "file": "assets/img/aya-korem-vinyl/cover-back-2400.webp",
-          "width": 2400,
-          "height": 3200,
-          "kb": 528
-        },
-        {
-          "file": "assets/img/aya-korem-vinyl/cover-back-1200.webp",
-          "width": 1200,
-          "height": 1600,
-          "kb": 185
-        }
-      ]
-    },
-    "cover-layout": {
-      "type": "image",
-      "sizes": [
-        {
-          "file": "assets/img/aya-korem-vinyl/cover-layout-2400.webp",
-          "width": 2400,
-          "height": 1388,
-          "kb": 694
-        },
-        {
-          "file": "assets/img/aya-korem-vinyl/cover-layout-1200.webp",
-          "width": 1200,
-          "height": 694,
-          "kb": 144
-        }
-      ]
-    },
     "booklet-mockup": {
       "type": "image",
       "sizes": [
