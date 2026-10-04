@@ -1094,6 +1094,28 @@
           "kb": 28
         }
       ]
+    },
+    "record-store": {
+      "type": "video",
+      "file": "assets/video/aya-korem-vinyl/record-store.mp4",
+      "mb": 5.12,
+      "duration": 8.0,
+      "width": 1280,
+      "height": 720,
+      "poster": [
+        {
+          "file": "assets/img/aya-korem-vinyl/record-store-poster-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "kb": 115
+        },
+        {
+          "file": "assets/img/aya-korem-vinyl/record-store-poster-1200.webp",
+          "width": 1200,
+          "height": 675,
+          "kb": 108
+        }
+      ]
     }
   },
   "checkcheck": {
