@@ -556,7 +556,7 @@ OwnIt – חממת המעצבות, מחזור א', 2026
 תוכנית הכשרה לסטודנטיות מצטיינות בחוג לעיצוב תקשורת חזותית, אוניברסיטת חיפה, שמעניקה כלים לפיתוח מנהיגות נשית בתחום ולהשתלבות בתעשייה. בהנחיית רינת הדר ואלה בן עמרם.
 
 **תוכנות**
-Adobe Creative Suite, Figma, Procreate, Midjourney
+Adobe Creative Suite, Figma, Procreate, Midjourney, FontCreator
 
 **יצירת קשר**
 - מייל: noga1277@gmail.com (קישור `mailto:`)
