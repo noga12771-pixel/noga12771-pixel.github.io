@@ -558,7 +558,11 @@ OwnIt – חממת המעצבות, מחזור א', 2026
 **תוכנות**
 Adobe Creative Suite, Figma, Procreate, Midjourney, FontCreator
 
+**שפות**
+עברית ואנגלית
+
 **יצירת קשר**
+- טלפון: 0548362240 (קישור `tel:+972548362240`, בטלפון לחיצה מחייגת)
 - מייל: noga1277@gmail.com (קישור `mailto:`)
 - אינסטגרם: https://www.instagram.com/imnoga/ (נפתח בלשונית חדשה)
 
