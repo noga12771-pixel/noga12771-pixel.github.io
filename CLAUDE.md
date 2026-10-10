@@ -562,7 +562,7 @@ Adobe Creative Suite, Figma, Procreate, Midjourney, FontCreator
 עברית ואנגלית
 
 **יצירת קשר**
-- טלפון: 0548362240 (קישור `tel:+972548362240`, בטלפון לחיצה מחייגת)
+- טלפון: 054-8362240 (קישור `tel:+972548362240`, בטלפון לחיצה מחייגת)
 - מייל: noga1277@gmail.com (קישור `mailto:`)
 - אינסטגרם: https://www.instagram.com/imnoga/ (נפתח בלשונית חדשה)
 
