@@ -1,6 +1,10 @@
 # הקבצים המקוריים של נוגה. לא עולים ל-GitHub
 raw/
 
+# קובצי גופן מקוריים (לאתר עולה רק assets/fonts/moledet.woff2)
+*.otf
+*.ttf
+
 # קבצי עבודה של תוכנות עיצוב
 *.aep
 Adobe After Effects Auto-Save/
